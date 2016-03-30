@@ -1,0 +1,11 @@
+<?php
+
+namespace My\RecipesBundle\Entity;
+
+class Recipe
+{
+	private $id;
+	protected $name;
+	protected $difficulty;
+	protected $description;
+}

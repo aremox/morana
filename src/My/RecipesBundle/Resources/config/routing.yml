@@ -1,0 +1,21 @@
+my_recipes_homepage:
+    path:     /
+    defaults: { _controller: MyRecipesBundle:Default:index }
+
+recipes_list:
+    path:     /recipes/{page}
+    defaults: { _controller: MyRecipesBundle:Recipe:list, page: 1 }
+    requirements:
+        page: \d+
+
+recipes_show:
+    path:     /recipes/{recipe_name}
+    defaults: { _controller: MyRecipesBundle:Recipe:show }
+
+recipes_show_id:
+    path:     /recipes/{recipe_id}
+    defaults: { _controller: MyRecipesBundle:Recipe:show }
+    requirements:
+        recipe_id: \d+
+    
+    
