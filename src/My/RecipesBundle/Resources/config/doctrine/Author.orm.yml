@@ -1,0 +1,14 @@
+My\RecipesBundle\Entity\Author:
+ type: entity
+ table: author
+ id:
+  id:
+    type: integer
+    generator: { strategy: AUTO }
+ fields:
+  name:
+    type: string
+    length: 255
+  surname:
+    type: string
+    length: 255

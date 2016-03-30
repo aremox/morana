@@ -1,0 +1,587 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"recipe"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"Re",
+				"Recipe"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"co",
+				"controller	AngularJS"
+			],
+			[
+				"i",
+				"item"
+			],
+			[
+				"ng-",
+				"ng-click	AngularJS"
+			],
+			[
+				"log",
+				"login"
+			],
+			[
+				"ca",
+				"ng-class	AngularJS"
+			],
+			[
+				"io",
+				"ion-view"
+			],
+			[
+				"Log",
+				"logout"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"$ionic",
+				"$ionicConfigProvider"
+			],
+			[
+				"$io",
+				"$ionicConfigProvider"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"ng-s",
+				"ng-submit	AngularJS"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"ng",
+				"ng-click	AngularJS"
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"o",
+				"overflow"
+			],
+			[
+				"h",
+				"h2	Tag"
+			],
+			[
+				"$",
+				"$state"
+			],
+			[
+				"to",
+				"toIndex"
+			],
+			[
+				"s",
+				"splice"
+			],
+			[
+				"fr",
+				"fromIndex"
+			],
+			[
+				"$sc",
+				"$scope	AngularJS"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"c",
+				"controller	AngularJS"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"me",
+				"methodOverride"
+			],
+			[
+				"com",
+				"compress"
+			],
+			[
+				"pr",
+				"process"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"lo",
+				"loadMovies"
+			],
+			[
+				"ng-r",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"ng-c",
+				"ng-click	AngularJS"
+			],
+			[
+				"r",
+				"rtmFactory"
+			],
+			[
+				"ng-v",
+				"ng-view	AngularJS"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"$s",
+				"$scope	AngularJS"
+			],
+			[
+				"tare",
+				"tareas"
+			],
+			[
+				"local",
+				"LocalStorageServiceProvider"
+			],
+			[
+				"loc",
+				"LocalStorageServiceProvider"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"an",
+				"angular"
+			],
+			[
+				"j",
+				"jquery-ui"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/My/RecipesBundle/Controller/DefaultController.php",
+			"settings":
+			{
+				"buffer_size": 272,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"last_filter": "ejs",
+		"selected_items":
+		[
+			[
+				"ejs",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"pack",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/morana"
+	],
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/RecipeController.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity/Recipe.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/DefaultController.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/web/app.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/README.md",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/composer.json",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/js/controllers.js",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/user.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/comunidad.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/templates/perfil.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/templates/menu.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/js/controllers.js",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/js/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/data/sitios.json",
+		"/Users/ivan/Documents/ProyectosIonic/morana/scss/ionic.app.scss",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/index.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/templates/categorias.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/platforms/android/build.gradle",
+		"/Users/ivan/Documents/ProyectosIonic/morana/platforms/android/AndroidManifest.xml",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/templates/login.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/js/services.js",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/lib/ionic/scss/_animations.scss",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/lib/ionic/scss/ionic.scss",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/lib/ionic/scss/_variables.scss",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/lib/ionic.ion.imagecachefactory.js",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/templates/playlists.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/ionic.project",
+		"/Users/ivan/Documents/ProyectosIonic/morana/package.json",
+		"/Users/ivan/Documents/ProyectosIonic/morana/bower.json",
+		"/Users/ivan/Documents/ProyectosIonic/morana/config.xml",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/css/style.css",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/templates/logout.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana2/www/templates/categorias.html",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/lib/ionic-material/dist/ionic.material.css",
+		"/Users/ivan/Documents/ProyectosIonic/morana/www/lib/ionic-material/dist/ionic.material.min.css",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/GoogleService-Info.plist",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/secure.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/js/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/js/services.js",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/config.xml",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/logout.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/home.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/index.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/login.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/tab.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/plugins/ios.json",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/package.json",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/plugins/fetch.json",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/platforms/android/android.json",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/lista.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/datos.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/css/style.css",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/info.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/www/templates/coche.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/templates/tab.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/templates/home.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/templates/coche.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/templates/comunidad.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/templates/datos.html",
+		"/Users/ivan/Documents/ProyectosIonic/Shelby/templates/info.html",
+		"/Users/ivan/Documents/workspace/hibrit/android/AndroidManifest.xml",
+		"/Users/ivan/Documents/ProyectosIonic/mean/bower.json",
+		"/Users/ivan/Documents/ProyectosIonic/mean/package.json",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/package.json",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/server/bootstrap.js",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/server/lib/collections.js",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/www/js/controllers.js",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/bower.json",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/www/js/services.js",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/www/js/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/www/templates/tab-chats.html",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/www/index.html",
+		"/Users/ivan/Documents/ProyectosIonic/chatsapp/www/templates/tabs.html",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/www/js/controllers.js",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/www/js/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/www/templates/chat-detail.html",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/www/templates/tab-chats.html",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/bower.json",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/www/js/services.js",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/sidemenu/www/templates/tabs.html",
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/express.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/mongoose.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/env/development.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/config.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/server.js",
+		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/routing/www/js/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/integracion/desactivar/www/index.html",
+		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/bson/ext/index.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/public/articles/controllers/articles.client.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/public/articles/services/articles.client.service.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/public/application.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/public/articles/articles.client.module.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/public/application.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/views/index.ejs",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/app/controllers/users.server.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/app/routes/articles.server.routes.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean025/app/controllers/articles.server.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean023/app/controllers/articles.server.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/models/article.server.model.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/models/user.server.model.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/controllers/index.server.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/public/example/views/example.client.view.html",
+		"/Users/ivan/Documents/ProyectosIonic/mean/public/example/config/example.client.routes.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/public/example/controllers/example.client.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/strategies/local.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/passport.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/controllers/users.server.controller.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongodb/lib/mongodb/index.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongodb/index.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongoose/package.json",
+		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongoose/index.js",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/routes/users.server.routes.js",
+		"/Users/ivan/Library/Application Support/Sublime Text 3/Packages/User/insert_ejs_tags.sublime-snippet",
+		"/Users/ivan/Documents/ProyectosIonic/mean/app/routes/index.server.routes.js",
+		"/Users/ivan/Documents/ProyectosIonic/pelis/app/css/app.css",
+		"/Users/ivan/Documents/ProyectosIonic/pelis/app/partials/lista-pelis.html",
+		"/Users/ivan/Documents/ProyectosIonic/pelis/app/js/controllers.js",
+		"/Users/ivan/Documents/ProyectosIonic/pelis/app/js/services.js",
+		"/Users/ivan/Documents/ProyectosIonic/pelis/app/js/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/pelis/app/index.html",
+		"/Users/ivan/Downloads/prototipo/app/scripts/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/prototipo/app/scripts/app.js",
+		"/Users/ivan/Documents/ProyectosIonic/prototipo/app/index.html",
+		"/Users/ivan/Documents/ProyectosIonic/prototipo/app/views/main.html",
+		"/Users/ivan/Documents/ProyectosIonic/prototipo/app/scripts/controllers/main.js",
+		"/Users/ivan/Downloads/prototipo/app/index.html",
+		"/Users/ivan/Documents/ProyectosIonic/MiProyecto/tareas/test/spec/controllers/main.js",
+		"/Users/ivan/Documents/ProyectosIonic/MiProyecto/tareas/test/karma.conf.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"CategoriasCtrl",
+			"ionicLoading",
+			"rmvDebug",
+			"rmv7Debug",
+			"Armv7Debug",
+			"dexArmv7Debug",
+			"dex",
+			"dexOption",
+			"dexOptions",
+			"alert",
+			"toggleDescripcion",
+			"alert",
+			"toggleDescripcion",
+			"alert",
+			"show",
+			".ionic .clear-bg",
+			"$state.go"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/My/RecipesBundle/Controller/DefaultController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "morana.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

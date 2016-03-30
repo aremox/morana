@@ -8,6 +8,7 @@ class Recipe
 	protected $name;
 	protected $difficulty;
 	protected $description;
+    protected $author;
 
     /**
      * Get id

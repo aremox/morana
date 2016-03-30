@@ -1,6 +1,12 @@
 My\RecipesBundle\Entity\Recipe:
  type: entity
  table: recipes
+ manyToOne:
+  author:
+    targetEntity: author
+    joinColumn:
+      name: author_id
+      referencedColumnName: id
  id:
   id:
     type: integer
