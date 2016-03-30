@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TOP CHEFS</title>
+	</head>
+	<body>
+		
+		<ul>
+			{% for item in chefs %}
+				<li>{{ item.name }} {{ item.surname }}</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

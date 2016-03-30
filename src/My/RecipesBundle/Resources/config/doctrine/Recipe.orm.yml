@@ -1,12 +1,27 @@
 My\RecipesBundle\Entity\Recipe:
  type: entity
  table: recipes
+ manyToMany:
+  ingredients:
+    targetEntity: Ingredient
+    joinTable:
+      name: recipe_ingredients
+      joinColumns:
+        recipe_id:
+          referencedColumnName: id
+      inverseJoinColumns:
+        ingredient_id:
+          referencedColumnName: id
+    cascade: ["persist"]
  manyToOne:
   author:
-    targetEntity: author
+    fetch: EAGER
+    inversedBy: recipes
+    targetEntity: Author
     joinColumn:
       name: author_id
       referencedColumnName: id
+    cascade: ["persist"]
  id:
   id:
     type: integer

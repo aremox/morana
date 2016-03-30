@@ -2,6 +2,12 @@ my_recipes_homepage:
     path:     /
     defaults: { _controller: MyRecipesBundle:Default:index }
 
+recipes_show_id:
+    path:     /recipes/{recipe_id}
+    defaults: { _controller: MyRecipesBundle:Recipe:showId }
+    requirements:
+        recipe_id: \d+
+
 recipes_list:
     path:     /recipes/{page}
     defaults: { _controller: MyRecipesBundle:Recipe:list, page: 1 }
@@ -12,10 +18,10 @@ recipes_show:
     path:     /recipes/{recipe_name}
     defaults: { _controller: MyRecipesBundle:Recipe:show }
 
-recipes_show_id:
-    path:     /recipes/{recipe_id}
-    defaults: { _controller: MyRecipesBundle:Recipe:show }
-    requirements:
-        recipe_id: \d+
+recipes_create:
+    path:     /create_recipe
+    defaults: { _controller: MyRecipesBundle:Recipe:create }
     
-    
+recipes_topChefs:
+    path: /top_Chefs
+    defaults: { _controller: MyRecipesBundle:Recipe:topChefs }

@@ -17,11 +17,6 @@ class Author
         $this->recipes = new ArrayCollection;
 	}
 
-    public function getRecipes()
-    {
-        return $this->recipes;
-    }
-
     /**
      * Get id
      *

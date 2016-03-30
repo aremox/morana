@@ -1,6 +1,7 @@
 <?php
 
 namespace My\RecipesBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class Recipe
 {
@@ -9,6 +10,21 @@ class Recipe
 	protected $difficulty;
 	protected $description;
     protected $author;
+    protected $ingredients;
+
+    public function __construct(Author $author, $name, $description, $difficulty)
+    {
+        $this->author = $author;
+        $this->name = $name;
+        $this->description = $description;
+        $this->difficulty = $difficulty;
+
+        $this->ingredients = new ArrayCollection();
+    }
+
+    public function add(Ingredient $ingredient){
+            $this->ingredients[] = $ingredient;
+    }
 
     /**
      * Get id
@@ -87,5 +103,61 @@ class Recipe
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \My\RecipesBundle\Entity\Author $author
+     * @return Recipe
+     */
+    public function setAuthor(\My\RecipesBundle\Entity\Author $author = null)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \My\RecipesBundle\Entity\Author 
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Add ingredients
+     *
+     * @param \My\RecipesBundle\Entity\Ingredient $ingredients
+     * @return Recipe
+     */
+    public function addIngredient(\My\RecipesBundle\Entity\Ingredient $ingredients)
+    {
+        $this->ingredients[] = $ingredients;
+
+        return $this;
+    }
+
+    /**
+     * Remove ingredients
+     *
+     * @param \My\RecipesBundle\Entity\Ingredient $ingredients
+     */
+    public function removeIngredient(\My\RecipesBundle\Entity\Ingredient $ingredients)
+    {
+        $this->ingredients->removeElement($ingredients);
+    }
+
+    /**
+     * Get ingredients
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIngredients()
+    {
+        return $this->ingredients;
     }
 }

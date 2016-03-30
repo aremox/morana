@@ -1,6 +1,11 @@
 My\RecipesBundle\Entity\Author:
  type: entity
+ repositoryClass: My\RecipesBundle\Repository\AuthorRepository
  table: author
+ oneToMany:
+  recipes:
+    targetEntity: Recipe
+    mappedBy: author
  id:
   id:
     type: integer

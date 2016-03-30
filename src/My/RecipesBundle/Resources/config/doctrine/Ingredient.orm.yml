@@ -1,0 +1,11 @@
+My\RecipesBundle\Entity\Ingredient:
+ type: entity
+ table: ingredient
+ id:
+  id:
+    type: integer
+    generator: { strategy: AUTO }
+ fields:
+  name:
+    type: string
+    length: 255
