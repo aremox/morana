@@ -5,7 +5,7 @@
 		[
 			[
 				"re",
-				"repository"
+				"resultado"
 			],
 			[
 				"My",
@@ -264,50 +264,43 @@
 			}
 		},
 		{
-			"file": "src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
+			"file": "src/My/RecipesBundle/Resources/views/Default/base.html.twig",
 			"settings":
 			{
-				"buffer_size": 349,
+				"buffer_size": 495,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/My/RecipesBundle/Resources/config/doctrine/Recipe.orm.yml",
+			"file": "src/My/RecipesBundle/Resources/views/Default/lastRecipes.html.twig",
 			"settings":
 			{
-				"buffer_size": 717,
+				"buffer_size": 100,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/My/RecipesBundle/Repository/AuthorRepository.php",
+			"file": "src/My/RecipesBundle/Twig/RecipesExtension.php",
 			"settings":
 			{
-				"buffer_size": 394,
+				"buffer_size": 524,
+				"line_ending": "Unix",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "src/My/RecipesBundle/Resources/config/services.yml",
+			"settings":
+			{
+				"buffer_size": 259,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/My/RecipesBundle/Resources/views/Recipe/topChefs.html.twig",
+			"file": "app/config/config.yml",
 			"settings":
 			{
-				"buffer_size": 200,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/My/RecipesBundle/Entity/Author.php",
-			"settings":
-			{
-				"buffer_size": 1163,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/My/RecipesBundle/Resources/config/doctrine/Author.orm.yml",
-			"settings":
-			{
-				"buffer_size": 349,
+				"buffer_size": 2218,
 				"line_ending": "Unix"
 			}
 		},
@@ -315,7 +308,15 @@
 			"file": "src/My/RecipesBundle/Resources/config/routing.yml",
 			"settings":
 			{
-				"buffer_size": 726,
+				"buffer_size": 731,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
+			"settings":
+			{
+				"buffer_size": 571,
 				"line_ending": "Unix"
 			}
 		}
@@ -362,25 +363,47 @@
 	"expanded_folders":
 	[
 		"/Applications/XAMPP/xamppfiles/htdocs/morana",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/config",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/Resources",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/Resources/java",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/Resources/views",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Repository",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/doctrine",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe"
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Default",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Twig"
 	],
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity/Author.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/RecipeController.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/AppKernel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Default/base.html.twig",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/DefaultController.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/config/parameters.yml.dist",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Repository/RecipeRepository.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/doctrine/Recipe.orm.yml",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Default/lastRecipes.html.twig",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity/Recipe.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Repository/AuthorRepository.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/routing.yml",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/doctrine/Author.orm.yml",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity/Author.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe/topChefs.html.twig",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/base.html.twig",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/header.html.twig",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/lastRecipes.html.twig",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/RecipeController.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/doctrine/Ingredient.orm.yml",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity/Ingredient.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/doctrine/Recipe.orm.yml",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/DefaultController.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/web/app.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/README.md",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/composer.json",
@@ -488,18 +511,7 @@
 		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongodb/lib/mongodb/index.js",
 		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongodb/index.js",
 		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongoose/package.json",
-		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongoose/index.js",
-		"/Users/ivan/Documents/ProyectosIonic/mean/app/routes/users.server.routes.js",
-		"/Users/ivan/Library/Application Support/Sublime Text 3/Packages/User/insert_ejs_tags.sublime-snippet",
-		"/Users/ivan/Documents/ProyectosIonic/mean/app/routes/index.server.routes.js",
-		"/Users/ivan/Documents/ProyectosIonic/pelis/app/css/app.css",
-		"/Users/ivan/Documents/ProyectosIonic/pelis/app/partials/lista-pelis.html",
-		"/Users/ivan/Documents/ProyectosIonic/pelis/app/js/controllers.js",
-		"/Users/ivan/Documents/ProyectosIonic/pelis/app/js/services.js",
-		"/Users/ivan/Documents/ProyectosIonic/pelis/app/js/app.js",
-		"/Users/ivan/Documents/ProyectosIonic/pelis/app/index.html",
-		"/Users/ivan/Downloads/prototipo/app/scripts/app.js",
-		"/Users/ivan/Documents/ProyectosIonic/prototipo/app/scripts/app.js"
+		"/Users/ivan/Documents/ProyectosIonic/mean/node_modules/mongoose/index.js"
 	],
 	"find":
 	{
@@ -567,8 +579,8 @@
 						"selection":
 						[
 							[
-								2609,
-								2609
+								17,
+								34
 							]
 						],
 						"settings":
@@ -576,94 +588,6 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 802.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 349,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								236,
-								332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/My/RecipesBundle/Resources/config/doctrine/Recipe.orm.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								380,
-								385
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/My/RecipesBundle/Repository/AuthorRepository.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 394,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -673,20 +597,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/My/RecipesBundle/Resources/views/Recipe/topChefs.html.twig",
+					"buffer": 1,
+					"file": "src/My/RecipesBundle/Resources/views/Default/base.html.twig",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 200,
+						"buffer_size": 495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								147,
-								147
+								369,
+								369
 							]
 						],
 						"settings":
@@ -698,54 +622,81 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/My/RecipesBundle/Entity/Author.php",
+					"buffer": 2,
+					"file": "src/My/RecipesBundle/Resources/views/Default/lastRecipes.html.twig",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1163,
+						"buffer_size": 100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								41,
-								7
+								60,
+								60
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/My/RecipesBundle/Resources/config/doctrine/Author.orm.yml",
+					"buffer": 3,
+					"file": "src/My/RecipesBundle/Twig/RecipesExtension.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 349,
+						"buffer_size": 524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/My/RecipesBundle/Resources/config/services.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
 							]
 						],
 						"settings":
@@ -756,24 +707,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "src/My/RecipesBundle/Resources/config/routing.yml",
+					"buffer": 5,
+					"file": "app/config/config.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 726,
+						"buffer_size": 2218,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								625,
-								625
+								2141,
+								2147
 							]
 						],
 						"settings":
@@ -781,6 +732,65 @@
 							"syntax": "Packages/YAML/YAML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 644.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/My/RecipesBundle/Resources/config/routing.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								102,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -873,7 +883,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 222.0,
+	"side_bar_width": 284.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

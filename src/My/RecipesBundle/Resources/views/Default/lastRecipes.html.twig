@@ -1,0 +1,6 @@
+<h3>Últimas recetas</h3>
+<ul>
+{% for item in recipes %}
+<li class="dificultad-{{ item|cssClass }}">{{ item.name}} </li>
+{% endfor %}
+</ul>

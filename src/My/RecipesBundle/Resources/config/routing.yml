@@ -9,7 +9,7 @@ recipes_show_id:
         recipe_id: \d+
 
 recipes_list:
-    path:     /recipes/{page}
+    path:     /recipes/list/{page}
     defaults: { _controller: MyRecipesBundle:Recipe:list, page: 1 }
     requirements:
         page: \d+

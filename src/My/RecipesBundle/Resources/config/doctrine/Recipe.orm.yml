@@ -1,5 +1,6 @@
 My\RecipesBundle\Entity\Recipe:
  type: entity
+ repositoryClass: My\RecipesBundle\Repository\RecipeRepository
  table: recipes
  manyToMany:
   ingredients:

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		{% include 'MyRecipesBundle:Default:header.html.twig' %}
+		<link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css')}}"/>
+
+	</head>
+	<body>
+	
+		{% block body %}{% endblock %}
+		{{ render(controller('MyRecipesBundle:Default:lastRecipes')) }}
+		
+		{% block javascript %}
+			{% javascripts 'public/js/*' filter='yui_js' %}
+				<script type="text/javascript" src="{{ asset_url}}"></script>
+			{% endjavascripts %}
+		{% endblock %}
+	</body>
+</html>

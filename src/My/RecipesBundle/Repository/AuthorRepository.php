@@ -15,4 +15,5 @@ use Doctrine\ORM\EntityRepository;
  		->setParameter('difficulty','dificil')
  		->getResult();
  	}
+
  }

@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>{{ recipe.name }}</title>
-	</head>
-	<body>
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block body %}
+
 		<h1>{{ recipe.name }}</h1>
 		<h2>{{ recipe.author.name }} {{ recipe.author.surname }}</h2>
+		<h4 class="dificultad-{{ recipe|cssClass }}">
+		{% if recipe.difficulty == 'facil' %}
+		No tendra problemas con esta receta
+		{% elseif recipe.difficulty == 'media' %}
+		Esta receta requiere conocimientos avanzados
+		{% else %}
+		Seras un TopChef!!!
+		{% endif %}
+		</h4>
 		<p>{{ recipe.description }}</p>
 		<h3>Ingredientes</h3>
 		<ul>
@@ -13,5 +20,4 @@
 				<li>{{ item.name }}</li>
 			{% endfor %}
 		</ul>
-	</body>
-</html>
+{% endblock %}

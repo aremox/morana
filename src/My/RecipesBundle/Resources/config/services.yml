@@ -2,3 +2,7 @@ services:
 #    my_recipes.example:
 #        class: My\RecipesBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+  my.twig.recipes_extension:
+    class: My\RecipesBundle\Twig\RecipesExtension
+    tags:
+      - { name: twig.extension }
