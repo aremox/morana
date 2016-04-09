@@ -15,15 +15,15 @@
 		public function cssClass($recipe)
 		{
 			$dificultad = $recipe->getDifficulty();
-			if($dificultad == 'facil'){
+			if($dificultad == 'easy'){
 				return 'easy';
 			}
 
-			if($dificultad == 'media'){
+			if($dificultad == 'normal'){
 				return 'normal';
 			}
 
-			if($dificultad == 'dificil'){
+			if($dificultad == 'hard'){
 				return 'hard';
 			}
 

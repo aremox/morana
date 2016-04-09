@@ -8,7 +8,7 @@ use Doctrine\ORM\EntityRepository;
 
  	public function findPublishedAfter() {
  		return $this->getEntityManager()->createQuery('
- 			SELECT r.name, r.difficulty
+ 			SELECT r
  			 			FROM MyRecipesBundle:Recipe r
  			 			ORDER BY r.name 
  			')

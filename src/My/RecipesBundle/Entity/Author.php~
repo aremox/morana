@@ -77,4 +77,27 @@ class Author
     {
         return $this->surname;
     }
+
+    /**
+     * Add recipes
+     *
+     * @param \My\RecipesBundle\Entity\Recipe $recipes
+     * @return Author
+     */
+    public function addRecipe(\My\RecipesBundle\Entity\Recipe $recipes)
+    {
+        $this->recipes[] = $recipes;
+
+        return $this;
+    }
+
+    /**
+     * Remove recipes
+     *
+     * @param \My\RecipesBundle\Entity\Recipe $recipes
+     */
+    public function removeRecipe(\My\RecipesBundle\Entity\Recipe $recipes)
+    {
+        $this->recipes->removeElement($recipes);
+    }
 }

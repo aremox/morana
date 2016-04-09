@@ -36,3 +36,7 @@ My\RecipesBundle\Entity\Recipe:
     length: 40
   description:
     type: text
+    nullable: TRUE
+  notes:
+    type: text
+    nullable: TRUE

@@ -1,0 +1,9 @@
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}Create author{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {'attr' : { 'id' : 'recipe-create'}}) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+{% endblock %}

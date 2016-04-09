@@ -8,16 +8,17 @@ class Recipe
 	private $id;
 	protected $name;
 	protected $difficulty;
-	protected $description;
+	protected $description = null;
     protected $author;
     protected $ingredients;
+    protected $notes = null;
 
-    public function __construct(Author $author, $name, $description, $difficulty)
+    public function __construct()
     {
-        $this->author = $author;
+       /* $this->author = $author;
         $this->name = $name;
         $this->description = $description;
-        $this->difficulty = $difficulty;
+        $this->difficulty = $difficulty;*/
 
         $this->ingredients = new ArrayCollection();
     }
@@ -26,6 +27,12 @@ class Recipe
             $this->ingredients[] = $ingredient;
     }
 
+    public function isHard(){
+           if($this->difficulty == 'hard'){
+                return true;
+           }
+           return false;
+    }
     /**
      * Get id
      *
@@ -111,7 +118,7 @@ class Recipe
      * @param \My\RecipesBundle\Entity\Author $author
      * @return Recipe
      */
-    public function setAuthor(\My\RecipesBundle\Entity\Author $author = null)
+    public function setAuthor(Author $author)
     {
         $this->author = $author;
 
@@ -159,5 +166,28 @@ class Recipe
     public function getIngredients()
     {
         return $this->ingredients;
+    }
+
+    /**
+     * Set notes
+     *
+     * @param string $notes
+     * @return Recipe
+     */
+    public function setNotes($notes)
+    {
+        $this->notes = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Get notes
+     *
+     * @return string 
+     */
+    public function getNotes()
+    {
+        return $this->notes;
     }
 }

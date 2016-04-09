@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Request;
 use My\RecipesBundle\Entity\Recipe;
 use My\RecipesBundle\Entity\Author;
 use My\RecipesBundle\Entity\Ingredient;
+use My\RecipesBundle\Form\Type\RecipeType;
+use My\RecipesBundle\Event\RecipeEvent;
 
 class RecipeController extends Controller
 {
@@ -49,24 +51,24 @@ class RecipeController extends Controller
             */  
     }
 
-    public function createAction()
+    /**
+     * @Template()
+     */
+    public function createAction(Request $request)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $recipe = new Recipe();
+        $form = $this->createForm(new RecipeType, $recipe);
+        $form->add('save', 'submit');
+        $form->handleRequest($request);
 
-        $autor = new Author('Karlos', 'Arguiñano');
-       // $em->persist($autor);
+        if ($form->isValid()) {
+            $this->get('my_recipes.recipe_creator')->create($recipe);
+            $recipeEvent = new RecipeEvent($recipe);
+            $this->get('event_dispatcher')->dispatch('recipe.create', $recipeEvent);
+            return $this->redirect($this->generateUrl('recipes_show_id', array('recipe_id' => $recipe->getId() )));
+        }
+        return array('form' => $form->createView());
 
-        $ingredient = new Ingredient('Pollo');
-        //$em->persist($ingredient);
-
-        $recipe = new Recipe($autor, 'Pollo al pil-pil', 'Deliciosa y economica receta.', 'facil');
-        $em->persist($recipe);
-
-        $recipe->add($ingredient);
-
-        $em->flush();
-
-        return $this->redirect($this->generateUrl('recipes_show_id', array('recipe_id' => $recipe->getId() )));
     }
     /**
     * @Template()
@@ -77,5 +79,39 @@ class RecipeController extends Controller
         $chefs = $repository->findTopChefs();
         return array('chefs' => $chefs);
         //return new Response('<html><body><p>'.print_r($chefs).'</p></body></html>');
+    }
+    /*
+    * @Template("mMyRecipesBundle:Default:lastRecipes.html.twig")
+    */
+    public function lastRecipesAction(Request $request)
+    {
+        $date = new \DateTime('-10 days');
+       
+        return $this->render('MyRecipesBundle:Default:lastRecipes.html.twig', 
+            array(
+            'recipes' => $this->get('my_recipes.last_recipes')->findFrom($date)
+            )
+            );
+        //return new Response('<html><body><p>'.print_r($recipes).'</p></body></html>');
+        //return (array('recipes' => $recipes));
+        
+    }
+
+    /**
+     * @Template()
+     */
+    public function editAction(Recipe $recipe, Request $request)
+    {
+        $form = $this->createForm(new RecipeType, $recipe);
+        $form->add('save', 'submit');
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirect($this->generateUrl('recipes_show_id', array('recipe_id' => $recipe->getId())));
+        }
+        return array(
+            'form' => $form->createView(),
+            'recipe' => $recipe);
     }
 }

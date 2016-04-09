@@ -25,3 +25,16 @@ recipes_create:
 recipes_topChefs:
     path: /top_Chefs
     defaults: { _controller: MyRecipesBundle:Recipe:topChefs }
+
+my_recipes_author_create:
+    pattern: /authors/create
+    defaults: {_controller: MyRecipesBundle:Author:create }
+
+my_recipes_author_show:
+    path: /authors/{author_id}
+    defaults: { _controller: MyRecipesBundle:Author:showId}
+    requirements:
+        recipe_id: \d+
+my_recipes_recipe_edit:
+    pattern:  /recipes/{id}/edit
+    defaults: { _controller: MyRecipesBundle:Recipe:edit }

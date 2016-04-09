@@ -8,7 +8,7 @@
 	<body>
 	
 		{% block body %}{% endblock %}
-		{{ render(controller('MyRecipesBundle:Default:lastRecipes')) }}
+		{{ render(controller('MyRecipesBundle:Recipe:lastRecipes')) }}
 		
 		{% block javascript %}
 			{% javascripts 'public/js/*' filter='yui_js' %}

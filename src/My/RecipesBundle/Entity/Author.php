@@ -1,6 +1,7 @@
 <?php
 
 namespace My\RecipesBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class Author
 {
@@ -9,17 +10,21 @@ class Author
 	protected $surname;
     protected $recipes;
 
-	public function __construct($name, $surname)
-	{
-		$this->name = $name;
-		$this->surname = $surname;
 
+	public function __construct()
+	{
+		
         $this->recipes = new ArrayCollection;
 	}
 
     public function getRecipes()
     {
         return $this->recipes;
+    }
+
+    public function isValid()
+    {
+        return $this->__toString() != 'Karlos Arguiñano';
     }
 
     /**

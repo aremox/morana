@@ -22,22 +22,4 @@ class DefaultController extends Controller
     	return $this->render('MyRecipesBundle:Default:base.html.twig');
         //return $this->render('MyRecipesBundle:Default:index.html.twig');
     }
-    /*
-    * @Template("mMyRecipesBundle:Default:lastRecipes.html.twig")
-    */
-    public function lastRecipesAction(Request $request)
-    {
-    	$date = new \DateTime('-10 days');
-        $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Recipe');
-        $session = $request->getSession();
-        $session->getFlashBag()->add(
-            'array',
-            'aaaa');
-        //$recipes = $repository->findPublishedAfter();
-        $recipes = $repository->findAll();
-        return $this->render('MyRecipesBundle:Default:lastRecipes.html.twig', array('recipes' => $recipes));
-        //return new Response('<html><body><p>'.print_r($recipes).'</p></body></html>');
-        //return (array('recipes' => $recipes));
-    	
-    }
 }
