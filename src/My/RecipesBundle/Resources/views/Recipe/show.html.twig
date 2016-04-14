@@ -1,7 +1,6 @@
 {% extends 'MyRecipesBundle:Default:base.html.twig' %}
 
 {% block body %}
-		{% trans %}Hello{% endtrans %}
 		<h1>{{ recipe.name }}</h1>
 		<h2>{{ recipe.author.name }} {{ recipe.author.surname }}</h2>
 		<h4 class="dificultad-{{ recipe|cssClass }}">

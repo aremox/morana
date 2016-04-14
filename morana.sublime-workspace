@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_locale"
+			],
+			[
 				"re",
 				"resultado"
 			],
@@ -259,7 +263,23 @@
 			"file": "src/My/RecipesBundle/Controller/DefaultController.php",
 			"settings":
 			{
-				"buffer_size": 781,
+				"buffer_size": 929,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/My/RecipesBundle/Resources/views/Default/base.html.twig",
+			"settings":
+			{
+				"buffer_size": 543,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/My/RecipesBundle/Resources/views/Default/lastRecipes.html.twig",
+			"settings":
+			{
+				"buffer_size": 138,
 				"line_ending": "Unix"
 			}
 		}
@@ -306,12 +326,18 @@
 	"expanded_folders":
 	[
 		"/Applications/XAMPP/xamppfiles/htdocs/morana",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/config",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Entity",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Model",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/translations",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Default",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/UserBundle",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/UserBundle/Controller",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/UserBundle/Entity",
@@ -327,6 +353,11 @@
 	],
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/translations/messages.fr.xlf",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/translations/messages.en.xlf",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/routing.yml",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
+		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/RecipeController.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/config/routing.yml",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/web/app.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Default/base.html.twig",
@@ -336,11 +367,9 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Event/RecipeEvent.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Security/login.html.twig",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/SecurityController.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/config/routing.yml",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/config/security.yml",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Event/RecipesListener.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/UserBundle/Entity/User.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Controller/RecipeController.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/UserBundle/Resources/config/doctrine/User.orm.yml",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Model/RecipeCreator.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Model/LastRecipes.php",
@@ -362,7 +391,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Author/show.html.twig",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Form/Type/DifficultyType.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe/create.html.twig",
-		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Resources/views/Recipe/show.html.twig",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/AppKernel.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/app/config/parameters.yml.dist",
 		"/Applications/XAMPP/xamppfiles/htdocs/morana/src/My/RecipesBundle/Repository/AuthorRepository.php",
@@ -452,9 +480,7 @@
 		"/Users/ivan/Documents/ProyectosIonic/mean/config/express.js",
 		"/Users/ivan/Documents/ProyectosIonic/mean/config/mongoose.js",
 		"/Users/ivan/Documents/ProyectosIonic/mean/config/env/development.js",
-		"/Users/ivan/Documents/ProyectosIonic/mean/config/config.js",
-		"/Users/ivan/Documents/ProyectosIonic/mean/server.js",
-		"/Users/ivan/Documents/ProyectosIonic/OtrosEjemplos/routing/www/js/app.js"
+		"/Users/ivan/Documents/ProyectosIonic/mean/config/config.js"
 	],
 	"find":
 	{
@@ -506,7 +532,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -515,15 +541,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 781,
+						"buffer_size": 929,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								624,
-								624
+								719,
+								729
 							]
 						],
 						"settings":
@@ -534,7 +560,64 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/My/RecipesBundle/Resources/views/Default/base.html.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								340,
+								340
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/My/RecipesBundle/Resources/views/Default/lastRecipes.html.twig",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

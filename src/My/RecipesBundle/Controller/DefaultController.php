@@ -19,7 +19,12 @@ class DefaultController extends Controller
     public function indexAction($name)
     {
     	$translated = $this->get('translator')->trans('Hola %name%', array('%name%' => $name ));
-    	return new Response($translated);
+    	
+    	return $this->render('MyRecipesBundle:Default:base.html.twig', 
+            array(
+            'bienvenida' => $translated
+            )
+            );
     	//return $this->render('MyRecipesBundle:Default:base.html.twig');
         //return $this->render('MyRecipesBundle:Default:index.html.twig');
     }
