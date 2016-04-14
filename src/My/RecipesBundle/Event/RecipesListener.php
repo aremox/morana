@@ -33,5 +33,6 @@ class RecipesListener
         //$this->mailer->send($email);
 
         echo "MAIL";
+        //$event->getDispatcher->dispatch('email.sent', new EmailEvent($email));
     }
 }

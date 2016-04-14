@@ -1,7 +1,10 @@
 my_recipes:
     resource: "@MyRecipesBundle/Resources/config/routing.yml"
     prefix:   /
-
+my_user:
+    resource: "@MyUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

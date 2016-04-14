@@ -1,7 +1,12 @@
 my_recipes_homepage:
-    path:     /
-    defaults: { _controller: MyRecipesBundle:Default:index }
-
+    path:     /{name}
+    defaults: { _controller: MyRecipesBundle:Default:index, name: "Pepe" }
+my_recipes_contact:
+    path:     /{_locale}/recipes/{recipe_id}
+    defaults: { _controller: MyRecipesBundle:Recipe:showId, _locale: en }
+    requirements:
+        _locale: en|fr|de
+        
 recipes_show_id:
     path:     /recipes/{recipe_id}
     defaults: { _controller: MyRecipesBundle:Recipe:showId }
@@ -38,3 +43,14 @@ my_recipes_author_show:
 my_recipes_recipe_edit:
     pattern:  /recipes/{id}/edit
     defaults: { _controller: MyRecipesBundle:Recipe:edit }
+
+my_recipes_homepage_secure:
+    path:     /secured
+    defaults: { _controller: MyRecipesBundle:Default:index }
+login:
+    path:   /login
+    defaults:  { _controller: MyRecipesBundle:Security:login }
+login_check:
+    path:   /login_check
+logout:
+    path:   /logout

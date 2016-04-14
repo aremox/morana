@@ -23,6 +23,7 @@ class RecipeController extends Controller
     {
         $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Recipe');
         $recipe = $repository->find($recipe_id);
+        $recipe->setName($this->get('translator')->trans($recipe->getName()));
         $session = $request->getSession();
         $session->set('clave','valor');
         $session->get('clave');
