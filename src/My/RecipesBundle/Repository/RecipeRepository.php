@@ -11,7 +11,7 @@ use Doctrine\ORM\EntityRepository;
  			SELECT r
  			 			FROM MyRecipesBundle:Recipe r
  			 			ORDER BY r.name 
- 			')
+ 			')->setMaxResults(6)
  		->getResult();
  	}
 

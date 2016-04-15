@@ -2,14 +2,16 @@
 <html>
 	<head>
 		{% include 'MyRecipesBundle:Default:header.html.twig' %}
-		<link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="{{ asset('public/css/uikit.min.css')}}"/>
 
 	</head>
-	<body>
-	
-		{% block body %} {{ bienvenida }}{% endblock %}
+	<body data-feedly-mini="yes">
+		<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+		{% include 'MyRecipesBundle:Default:navBar.html.twig' %}
+		{% block body %} {% include 'MyRecipesBundle:Default:indexCuerpo.html.twig' %} {% endblock %}
 		{{ render(controller('MyRecipesBundle:Recipe:lastRecipes')) }}
-		{% block footer %}{% endblock %}
+		{% block footer %}{% include 'MyRecipesBundle:Default:footer.html.twig' %}{% endblock %}
+		</div>
 		{% block javascript %}
 			{% javascripts 'public/js/*' filter='yui_js' %}
 				<script type="text/javascript" src="{{ asset_url}}"></script>
