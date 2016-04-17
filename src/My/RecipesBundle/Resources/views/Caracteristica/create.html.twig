@@ -1,0 +1,37 @@
+{# src/My/RecipesBundle/Resources/views/Categoria/create.html.twig #}
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}Crear Categoria{% endblock %}
+
+{% block body %}
+   {{ form_start(form, {'attr' : { 'id' : 'author-create', 'class' : 'uk-form uk-form-horizontal'}}) }}
+    {{ form_errors(form) }}
+    	<fieldset data-uk-margin>
+        <legend>Crear Categoria</legend>
+     		<div class="uk-form-row">
+            	{{ form_label(form.nombre, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }}
+            	{{ form_errors(form.nombre) }}
+            	<div class="uk-form-controls">
+            		{{ form_widget(form.nombre) }}
+            	</div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.ruta, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.ruta) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.ruta) }}
+                </div>
+            </div>
+     		<div class="uk-form-row">
+                {{ form_label(form.descripcion, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.descripcion) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.descripcion) }}
+                </div>
+            </div>
+     		<div class="uk-form-row">
+        	   {{ form_widget(form.Guardar, {'attr': {'class': 'uk-button'}}) }}
+        	</div>
+        </fieldset>
+    {{ form_end(form) }}
+{% endblock %}

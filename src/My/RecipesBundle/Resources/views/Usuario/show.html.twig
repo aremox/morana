@@ -1,0 +1,18 @@
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}{{ usuario.nombre }}{% endblock %}
+
+{% block body %}
+
+		<h1>{{ usuario.nombre }} {{ usuario.apellido1 }} {{ usuario.apellido2 }}</h1>
+		<h2>{{ usuario.ruta }} </h2>
+		<ul>
+		<li>Mail: {{ usuario.mail }} </li>
+		<li>Teléfono: {{ usuario.telefono }} </li>
+		<li>Dirección: {{ usuario.direccion }} </li>
+		<li>Localidad: {{ usuario.localidad }} </li>
+		<li>codigoPostal: {{ usuario.codigoPostal }} </li>
+		</ul>
+		<p>{{ usuario.nota }}</p>
+		
+{% endblock %}

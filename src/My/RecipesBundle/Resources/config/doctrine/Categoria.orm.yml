@@ -1,0 +1,28 @@
+My\RecipesBundle\Entity\Categoria:
+    type: entity
+    table: categoria
+    oneToMany:
+        elementos:
+          targetEntity: Elemento
+          mappedBy: categoria
+    repositoryClass: My\RecipesBundle\Repository\CategoriaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '40'
+        ruta:
+            type: string
+            length: '255'
+            unique: true
+        foto:
+            type: string
+            length: '50'
+        descripcion:
+            type: text
+    lifecycleCallbacks: {  }

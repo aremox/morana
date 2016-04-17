@@ -6,7 +6,77 @@ my_recipes_contact:
     defaults: { _controller: MyRecipesBundle:Recipe:showId, _locale: en }
     requirements:
         _locale: en|fr|de
-        
+##################################################################################
+## Elemento
+my_recipes_elemento_create:
+    pattern:  /elemento/create
+    defaults: { _controller: MyRecipesBundle:Elemento:create }
+my_recipes_elemento_ver_id:
+    path: /elemento/{elemento_id}
+    defaults: { _controller: MyRecipesBundle:Elemento:showId}
+    requirements:
+        elemento_id: \d+
+my_recipes_elemento_ver_ruta:
+    path: /elemento/{elemento_ruta}
+    defaults: { _controller: MyRecipesBundle:Elemento:showRuta}
+my_recipes_elemento_edit_id:
+    pattern: /elemento/{id}/edit
+    defaults: { _controller: MyRecipesBundle:Elemento:edit}
+    requirements:
+        elemento_id: \d+
+## Categoria
+my_recipes_categoria_create:
+    pattern:  /categoria/create
+    defaults: { _controller: MyRecipesBundle:Categoria:create }
+my_recipes_categoria_ver_id:
+    path: /categoria/{categoria_id}
+    defaults: { _controller: MyRecipesBundle:Categoria:showId}
+    requirements:
+        categoria_id: \d+
+my_recipes_categoria_ver_ruta:
+    path: /categoria/{categoria_ruta}
+    defaults: { _controller: MyRecipesBundle:Categoria:showRuta}
+my_recipes_categoria_edit_id:
+    pattern: /categoria/{id}/edit
+    defaults: { _controller: MyRecipesBundle:Categoria:edit}
+    requirements:
+        categoria_id: \d+
+## Caracteristica
+my_recipes_caracteristica_create:
+    pattern:  /caracteristica/create
+    defaults: { _controller: MyRecipesBundle:Caracteristica:create }
+my_recipes_caracteristica_ver_id:
+    path: /caracteristica/{caracteristica_id}
+    defaults: { _controller: MyRecipesBundle:Caracteristica:showId}
+    requirements:
+        caracteristica_id: \d+
+my_recipes_caracteristica_ver_ruta:
+    path: /caracteristica/{caracteristica_ruta}
+    defaults: { _controller: MyRecipesBundle:Caracteristica:showRuta}
+my_recipes_caracteristica_edit_id:
+    pattern: /caracteristica/{id}/edit
+    defaults: { _controller: MyRecipesBundle:Caracteristica:edit}
+    requirements:
+        caracteristica_id: \d+
+## Usuario
+my_recipes_usuario_create:
+    pattern:  /usuario/create
+    defaults: { _controller: MyRecipesBundle:Usuario:create }
+my_recipes_usuario_ver_id:
+    path: /usuario/{usuario_id}
+    defaults: { _controller: MyRecipesBundle:Usuario:showId}
+    requirements:
+        usuario_id: \d+
+my_recipes_usuario_ver_ruta:
+    path: /usuario/{usuario_ruta}
+    defaults: { _controller: MyRecipesBundle:Usuario:showRuta}
+my_recipes_usuario_edit_id:
+    pattern: /usuario/{id}/edit
+    defaults: { _controller: MyRecipesBundle:Usuario:edit}
+    requirements:
+        usuario_id: \d+
+
+################# Ejemplos de los apuntes   ######################################
 recipes_show_id:
     path:     /recipes/{recipe_id}
     defaults: { _controller: MyRecipesBundle:Recipe:showId }

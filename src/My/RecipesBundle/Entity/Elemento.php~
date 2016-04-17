@@ -1,0 +1,21 @@
+<?php
+
+namespace My\RecipesBundle\Entity;
+
+
+class Elemento
+{
+    private $id;
+    protected $nombre;
+    protected $logotipo;
+    protected $galeria;
+    protected $telefono;
+    protected $gps_latitud;
+    protected $gps_longitud;
+    protected $mail;
+    protected $direccion;
+    protected $localidad;
+    protected $codigo_postal;
+    protected $descripcion;
+
+}

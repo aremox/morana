@@ -1,0 +1,86 @@
+{# src/My/RecipesBundle/Resources/views/Categoria/create.html.twig #}
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}Crear Usuario{% endblock %}
+
+{% block body %}
+   {{ form_start(form, {'attr' : { 'id' : 'author-create', 'class' : 'uk-form uk-form-horizontal'}}) }}
+    {{ form_errors(form) }}
+    	<fieldset data-uk-margin>
+        <legend>Crear Usuario</legend>
+     		<div class="uk-form-row">
+            	{{ form_label(form.nombre, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }}
+            	{{ form_errors(form.nombre) }}
+            	<div class="uk-form-controls">
+            		{{ form_widget(form.nombre) }}
+            	</div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.apellido1, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.apellido1) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.apellido1) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.apellido2, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.apellido2) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.apellido2) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.ruta, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.ruta) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.ruta) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.mail, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.mail) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.mail) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.telefono, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.telefono) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.telefono) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.direccion, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.direccion) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.direccion) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.localidad, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.localidad) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.localidad) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.codigoPostal, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.codigoPostal) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.codigoPostal) }}
+                </div>
+            </div>
+     		<div class="uk-form-row">
+                {{ form_label(form.nota, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.nota) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.nota) }}
+                </div>
+            </div>
+     		<div class="uk-form-row">
+        	   {{ form_widget(form.Guardar, {'attr': {'class': 'uk-button'}}) }}
+        	</div>
+        </fieldset>
+    {{ form_end(form) }}
+{% endblock %}

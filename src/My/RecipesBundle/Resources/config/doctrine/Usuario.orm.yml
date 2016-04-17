@@ -1,0 +1,50 @@
+My\RecipesBundle\Entity\Usuario:
+    type: entity
+    table: null
+    repositoryClass: My\RecipesBundle\Repository\UsuarioRepository
+    oneToMany:
+        elementos:
+          targetEntity: Elemento
+          mappedBy: categoria
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '40'
+        apellido1:
+            type: string
+            length: '40'
+        apellido2:
+            type: string
+            length: '40'
+            nullable: true
+        telefono:
+            type: integer
+            nullable: true
+            unique: true
+        mail:
+            type: string
+            length: '40'
+            unique: true
+        direccion:
+            type: string
+            length: 255
+        localidad:
+            type: string
+            length: '40'
+        codigoPostal:
+            type: integer
+            column: codigo_postal
+        ruta:
+            type: string
+            length: '255'
+            unique: true
+        nota:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -7,3 +7,24 @@ My\RecipesBundle\Entity\Author:
         - NotBlank: ~
       surname:
         - NotBlank: ~
+My\RecipesBundle\Entity\Categoria:
+    getters:
+      valid:
+        - "True": { message: "No aceptamos recetas del autor" }
+    properties:
+      nombre:
+        - NotBlank: ~
+      ruta:
+        - NotBlank: ~
+      foto:
+        - NotBlank: ~
+      descripcion:
+        - NotBlank: ~
+My\RecipesBundle\Entity\Caracteristica:
+  properties:
+    nombre:
+      - NotBlank: ~
+    ruta:
+        - NotBlank: ~
+    descripcion:
+      - NotBlank: ~

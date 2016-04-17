@@ -1,0 +1,11 @@
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}{{ caracteristica.nombre }}{% endblock %}
+
+{% block body %}
+
+		<h1>{{ caracteristica.nombre }} </h1>
+		<h3>{{ caracteristica.ruta }} </h3>
+		<p>{{ caracteristica.descripcion }}</p>
+		
+{% endblock %}

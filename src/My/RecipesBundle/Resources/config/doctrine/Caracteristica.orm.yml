@@ -1,0 +1,21 @@
+My\RecipesBundle\Entity\Caracteristica:
+    type: entity
+    table: null
+    repositoryClass: My\RecipesBundle\Repository\CaracteristicaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '40'
+        ruta:
+            type: string
+            length: '255'
+            unique: true
+        descripcion:
+            type: text
+    lifecycleCallbacks: {  }

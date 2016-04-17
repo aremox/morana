@@ -1,0 +1,11 @@
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}{{ categoria.nombre }}{% endblock %}
+
+{% block body %}
+		<h1>{{ categoria.nombre }} </h1>
+		<h3>{{ categoria.ruta }} </h3>
+		<h2>{{ categoria.foto }} </h2>
+		<p>{{ categoria.descripcion }}</p>
+		
+{% endblock %}

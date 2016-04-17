@@ -1,0 +1,78 @@
+My\RecipesBundle\Entity\Elemento:
+    type: entity
+    table: elemento
+    manyToOne:
+        usuario:
+            inversedBy: elementos
+            targetEntity: Usuario
+            joinColumn:
+                name: usuario_id
+                referencedColumnName: id
+            cascade: ["all"]
+        categoria:
+            targetEntity: Categoria
+            joinColumn:
+                name: categoria_id
+                referencedColumnName: id
+            cascade: ["all"]
+    manyToMany:
+        caracteristicas:
+            targetEntity: Caracteristica
+            joinTable:
+                name: elementos_caracteristicas
+                joinColumns:
+                    recipe_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    ingredient_id:
+                        referencedColumnName: id
+            cascade: ["all"]
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        nombre:
+            type: string
+            length: 255
+        logotipo:
+            type: string
+            length: 50
+            nullable: true
+        galeria:
+            type: string
+            length: 50
+            nullable: true
+        telefono:
+            type: integer
+            length: 9
+            nullable: true
+        gps_latitud:
+            type: float
+            nullable: true
+        gps_longitud:
+            type: float
+            nullable: true
+        mail:
+            type: string
+            length: 50
+            nullable: true
+        direccion:
+            type: string
+            length: 255
+            nullable: true
+        localidad:
+            type: string
+            length: 50
+            nullable: true
+        telefono:
+            type: integer
+            length: 5
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        ruta:
+            type: string
+            length: '255'
+            unique: true
