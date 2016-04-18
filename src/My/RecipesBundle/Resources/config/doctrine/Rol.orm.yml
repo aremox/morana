@@ -1,0 +1,22 @@
+My\RecipesBundle\Entity\Rol:
+    type: entity
+    table: null
+    repositoryClass: My\RecipesBundle\Repository\RolRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        rol:
+            type: string
+            length: 255
+            unique: true
+        denominacion:
+            type: string
+            length: 255
+            unique: true
+        descripcion:
+            type: text
+    lifecycleCallbacks: {  }

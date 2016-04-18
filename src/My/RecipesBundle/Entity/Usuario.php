@@ -3,12 +3,13 @@
 namespace My\RecipesBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Usuario
  */
-class Usuario
+class Usuario implements UserInterface
 {
     /**
      * @var int
@@ -65,11 +66,25 @@ class Usuario
      */
     private $ruta;
 
+    /**
+     * @var string
+     */
+    private $password;
+
+    /**
+     * @var string
+     */
+    private $salt;
+
+    
+    protected $rolesObj;
+
     protected $elementos;
 
   public function __construct()
     {
        $this->elementos = new ArrayCollection;
+       $this->rolesObj = new ArrayCollection;
     }
 
 public function getElementos()
@@ -294,10 +309,10 @@ public function getElementos()
     }
 
      /**
-     * Set descripcion
+     * Set ruta
      *
-     * @param string $descripcion
-     * @return Caracteristicas
+     * @param string $ruta
+     * @return Usuario
      */
     public function setRuta($ruta)
     {
@@ -307,12 +322,107 @@ public function getElementos()
     }
 
     /**
-     * Get descripcion
+     * Get ruta
      *
      * @return string 
      */
     public function getRuta()
     {
         return $this->ruta;
+    }
+
+     /**
+     * Set password
+     *
+     * @param string $password
+     * @return Usuario
+     */
+    public function setPassword($password)
+    {
+        $this->$password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     * @return Usuario
+     */
+    public function setSalt($salt)
+    {
+        $this->$salt = $salt;
+
+        return $this;
+    }
+
+    /**
+     * Get salt
+     *
+     * @return string 
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * Set Roles_obj
+     *
+     * @param string $Roles_obj
+     * @return Usuario
+     */
+    public function setRolesObj($rolesObj)
+    {
+        $this->$rolesObj = $rolesObj;
+
+        return $this;
+    }
+
+    /**
+     * Get Roles_obj
+     *
+     * @return string 
+     */
+    public function getRolesObj()
+    {
+        return $this->rolesObj;
+    }
+
+
+    /**
+     * Get roles
+     *
+     * @return string 
+     */
+    public function getRoles()
+    {
+        $roles_array = array('ROLE_NOROL' );
+
+        foreach ($this->roles as $roles) {
+                $roles_array[] = $roles->getRol();
+                
+            }
+        return $roles_array;
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
+    public function getUsername()
+    {
+        return $this->mail;
     }
 }

@@ -78,6 +78,13 @@
                     {{ form_widget(form.nota) }}
                 </div>
             </div>
+            <div class="uk-form-row">
+                {{ form_label(form.roles_obj, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.roles_obj) }}
+                
+                    {{ form_widget(form.roles_obj, {'attr': {'class': 'uk-form-controls'}}) }}
+                
+            </div>
      		<div class="uk-form-row">
         	   {{ form_widget(form.Guardar, {'attr': {'class': 'uk-button'}}) }}
         	</div>

@@ -6,6 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 
 class UsuarioType extends AbstractType
@@ -25,6 +26,10 @@ class UsuarioType extends AbstractType
             ->add('codigoPostal', 'text', array('label' => 'Codigo postal'))
             ->add('nota', TextareaType::class, array(
     'attr' => array('class' => 'tinymce'),'label' => 'Nota'
+))
+            ->add('roles_obj', 'entity', array(
+    'class' => 'MyRecipesBundle:Rol', 'multiple' => 'true', 'expanded' => true,
+    'choice_label' => 'denominacion', 'label' => 'Roles'
 ))
             ->add('Guardar', 'submit');
     }

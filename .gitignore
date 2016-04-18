@@ -42,3 +42,7 @@
 
 # Composer PHAR
 /composer.phar
+
+# Sublime
+/.sublime-workspace
+/morana.sublime-project

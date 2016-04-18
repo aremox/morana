@@ -6,6 +6,18 @@ My\RecipesBundle\Entity\Usuario:
         elementos:
           targetEntity: Elemento
           mappedBy: categoria
+    manyToMany:
+        rolesObj:
+            targetEntity: Rol
+            joinTable:
+                name: usuario_rol
+                joinColumns:
+                    usuario_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    rol_id:
+                        referencedColumnName: id
+            cascade: ["all"]
     id:
         id:
             type: integer
@@ -47,4 +59,10 @@ My\RecipesBundle\Entity\Usuario:
         nota:
             type: text
             nullable: true
+        password:
+            type: string
+            length: '64'
+        salt:
+            type: string
+            length: '64'
     lifecycleCallbacks: {  }
