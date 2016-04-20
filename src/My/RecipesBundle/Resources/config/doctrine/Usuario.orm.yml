@@ -46,12 +46,15 @@ My\RecipesBundle\Entity\Usuario:
         direccion:
             type: string
             length: 255
+            nullable: true
         localidad:
             type: string
             length: '40'
+            nullable: true
         codigoPostal:
             type: integer
             column: codigo_postal
+            nullable: true
         ruta:
             type: string
             length: '255'

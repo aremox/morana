@@ -62,8 +62,16 @@ my_recipes_caracteristica_edit_id:
 my_recipes_usuario_create:
     pattern:  /secured/admin/usuario/create
     defaults: { _controller: MyRecipesBundle:Usuario:create }
+my_recipes_usuario_register:
+    pattern:  /usuario/register
+    defaults: { _controller: MyRecipesBundle:Usuario:register }
 my_recipes_usuario_ver_id:
     path: /secured/usuario/{usuario_id}
+    defaults: { _controller: MyRecipesBundle:Usuario:showId}
+    requirements:
+        usuario_id: \d+
+my_recipes_usuario_ver_id_registro:
+    path: /usuario/{usuario_id}
     defaults: { _controller: MyRecipesBundle:Usuario:showId}
     requirements:
         usuario_id: \d+

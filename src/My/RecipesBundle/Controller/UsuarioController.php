@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use My\RecipesBundle\Form\Type\UsuarioType;
+use My\RecipesBundle\Form\Type\RegisterType;
 
 use My\RecipesBundle\Entity\Usuario;
 
@@ -65,5 +66,34 @@ class UsuarioController extends Controller
         return array(
             'form' => $form->createView(),
             'usuario' => $usuario);
+    }
+
+    /**
+     * @Template()
+     */
+    public function registerAction(Request $request)
+    {
+        $usuario = new Usuario;
+        $validator = $this->get('validator');
+        $errors = $validator->validate($usuario);
+        $form = $this->createForm(new RegisterType, $usuario);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $usuario->setRuta($usuario->getMail());
+            $password = $this->get('security.password_encoder')
+                ->encodePassword($usuario, $usuario->getPlainPassword());
+                
+                //5bc4c37a302f3a672c69516df20c6ba644e68356
+                //5bc4c37a302f3a672c69516df20c6ba644e68356
+            $usuario->setPassword($password);
+            echo($usuario->getPassword());
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($usuario);
+            $em->flush();
+            return $this->redirect($this->generateUrl('my_recipes_usuario_ver_id_registro', 
+                array('usuario_id' => $usuario->getId())));
+        }
+        return array('form' => $form->createView());
     }
 }

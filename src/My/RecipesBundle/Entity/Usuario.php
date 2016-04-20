@@ -5,6 +5,9 @@ namespace My\RecipesBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
  * Usuario
@@ -67,6 +70,12 @@ class Usuario implements UserInterface
     private $ruta;
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
+    /**
      * @var string
      */
     private $password;
@@ -85,6 +94,8 @@ class Usuario implements UserInterface
     {
        $this->elementos = new ArrayCollection;
        $this->rolesObj = new ArrayCollection;
+       $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
+       
     }
 
 public function getElementos()
@@ -314,9 +325,9 @@ public function getElementos()
      * @param string $ruta
      * @return Usuario
      */
-    public function setRuta($ruta)
+    public function setRuta($mail)
     {
-        $this->ruta = str_replace(" ","_",$ruta);
+        $this->ruta = str_replace(" ","_",$mail);
 
         return $this;
     }
@@ -331,6 +342,16 @@ public function getElementos()
         return $this->ruta;
     }
 
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
      /**
      * Set password
      *
@@ -338,9 +359,9 @@ public function getElementos()
      * @return Usuario
      */
     public function setPassword($password)
-    {
-        $this->$password = $password;
-
+    {   
+        $this->password = $password;
+        
         return $this;
     }
 
@@ -351,6 +372,7 @@ public function getElementos()
      */
     public function getPassword()
     {
+        
         return $this->password;
     }
 
@@ -408,9 +430,9 @@ public function getElementos()
      */
     public function getRoles()
     {
-        $roles_array = array('ROLE_NOROL' );
+        $roles_array = array('ROLE_USER' );
 
-        foreach ($this->roles as $roles) {
+        foreach ($this->rolesObj as $roles) {
                 $roles_array[] = $roles->getRol();
                 
             }
