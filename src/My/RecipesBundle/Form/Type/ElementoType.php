@@ -23,6 +23,10 @@ class ElementoType extends AbstractType
     'class' => 'MyRecipesBundle:Categoria',
     'choice_label' => 'nombre', 'label' => 'Categoria'
 ))
+            ->add('usuario', 'entity', array(
+    'class' => 'MyRecipesBundle:Usuario',
+    'choice_label' => 'nombre', 'label' => 'Propietario'
+))
             ->add('descripcion', TextareaType::class, array(
     'attr' => array('class' => 'tinymce'),'label' => 'Descripción'
 ))

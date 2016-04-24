@@ -23,7 +23,7 @@ my_recipes_elemento_ver_ruta:
     path: /elemento/{elemento_ruta}
     defaults: { _controller: MyRecipesBundle:Elemento:showRuta}
 my_recipes_elemento_edit_id:
-    pattern: /elemento/{id}/edit
+    pattern: /secured/elemento/{id}/edit
     defaults: { _controller: MyRecipesBundle:Elemento:edit}
     requirements:
         elemento_id: \d+

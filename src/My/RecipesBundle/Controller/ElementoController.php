@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use My\RecipesBundle\Form\Type\ElementoType;
+use My\RecipesBundle\Event\ElementoEvent;
 
 use My\RecipesBundle\Entity\Elemento;
 
@@ -23,9 +24,11 @@ class ElementoController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($elemento);
-            $em->flush();
+          
+            $this->get('my_recipes.elemento_creator')->create($elemento);
+            $elementoEvent = new ElementoEvent($elemento);
+            $this->get('event_dispatcher')->dispatch('elemento.create', $elementoEvent);
+            
             return $this->redirect($this->generateUrl('my_recipes_elemento_ver_id', 
                 array('elemento_id' => $elemento->getId())));
         }

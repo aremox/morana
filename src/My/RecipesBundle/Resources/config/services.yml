@@ -28,3 +28,12 @@ services:
   my_recipes.Elementos_Categoria:
     class: My\RecipesBundle\Model\ElementosCategoria
     arguments: ["@doctrine.orm.entity_manager"]
+  my_recipes.elemento_creator:
+    class: My\RecipesBundle\Model\ElementoCreator
+    arguments: ["@doctrine.orm.entity_manager"]
+  my_recipes.elemento_listener:
+        class: My\RecipesBundle\Event\ElementoListener
+        arguments: ["@logger"]
+        tags:
+          - { name: kernel.event_listener, event: elemento.create, method: onElementoCreate }
+  
