@@ -25,3 +25,6 @@ services:
     arguments: ["@mailer"]
     tags:
       - { name: kernel.event_listener, event: recipe.create, method: onRecipeCreate }
+  my_recipes.Elementos_Categoria:
+    class: My\RecipesBundle\Model\ElementosCategoria
+    arguments: ["@doctrine.orm.entity_manager"]

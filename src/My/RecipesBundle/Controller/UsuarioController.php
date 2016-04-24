@@ -83,11 +83,7 @@ class UsuarioController extends Controller
             $usuario->setRuta($usuario->getMail());
             $password = $this->get('security.password_encoder')
                 ->encodePassword($usuario, $usuario->getPlainPassword());
-                
-                //5bc4c37a302f3a672c69516df20c6ba644e68356
-                //5bc4c37a302f3a672c69516df20c6ba644e68356
             $usuario->setPassword($password);
-            echo($usuario->getPassword());
             $em = $this->getDoctrine()->getManager();
             $em->persist($usuario);
             $em->flush();

@@ -23,6 +23,15 @@ class CategoriaController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $categoria->setRuta($categoria->getNombre());
+             if($categoria->getFotoReal()){
+                $foto = $categoria->getFotoReal();
+                $fileName = str_replace(" ","_",$foto->getClientOriginalName());
+                $fotoDir = $this->container->getParameter('kernel.root_dir').'/../web/images/categorias';
+                $foto->move($fotoDir, $fileName);
+                $categoria->setFoto($fileName);
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($categoria);
             $em->flush();
@@ -58,11 +67,43 @@ class CategoriaController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            if($categoria->getFotoReal()){
+                $foto = $categoria->getFotoReal();
+                $fileName = str_replace(" ","_",$foto->getClientOriginalName());
+                $fotoDir = $this->container->getParameter('kernel.root_dir').'/../web/images/categorias';
+                $foto->move($fotoDir, $fileName);
+                $categoria->setFoto($fileName);
+            }
+
+            
+
+
             $this->getDoctrine()->getManager()->flush();
             return $this->redirect($this->generateUrl('my_recipes_categoria_ver_id', array('categoria_id' => $categoria->getId())));
         }
         return array(
             'form' => $form->createView(),
             'categoria' => $categoria);
+    }
+
+    public function showAllAction( $formato, Request $request)
+    {
+        $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Categoria');
+        $categorias = $repository->findAll();
+
+        switch ($formato) {
+        case "bloques":
+            return $this->render('MyRecipesBundle:Categoria:showAll.html.twig', array(
+                'categorias' => $categorias));
+            break;
+        case "lista":
+            return $this->render('MyRecipesBundle:Categoria:showAllList.html.twig', array(
+                'categorias' => $categorias));
+            break;
+        default:
+            return $this->render('MyRecipesBundle:Categoria:showAll.html.twig', array(
+                'categorias' => $categorias));
+        
+        }         
     }
 }

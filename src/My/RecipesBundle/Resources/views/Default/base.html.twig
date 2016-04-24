@@ -3,7 +3,10 @@
 	<head>
 		<title>{% block title %}Welcome!{% endblock %}</title>
 		{% include 'MyRecipesBundle:Default:header.html.twig' %}
-		<link rel="stylesheet" type="text/css" href="{{ asset('public/css/uikit.min.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="/public/css/uikit.css"/>
+		<link rel="stylesheet" type="text/css" href="/public/css/dataTables.uikit.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/public/css/components/dataTables.uikit.min.css"/>
+		
 
 	</head>
 	<body data-feedly-mini="yes">
@@ -14,7 +17,10 @@
 		{% block footer %}{% include 'MyRecipesBundle:Default:footer.html.twig' %}{% endblock %}
 		</div>
 		{% block javascript %}
-			{% javascripts 'public/js/*' filter='yui_js' %}
+			{% javascripts 'public/js/*' %}
+				<script type="text/javascript" src="{{ asset_url}}"></script>
+			{% endjavascripts %}
+			{% javascripts 'public/js/components/*' %}
 				<script type="text/javascript" src="{{ asset_url}}"></script>
 			{% endjavascripts %}
 		{% endblock %}

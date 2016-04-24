@@ -10,13 +10,9 @@ My\RecipesBundle\Entity\Author:
 My\RecipesBundle\Entity\Categoria:
     getters:
       valid:
-        - "True": { message: "No aceptamos recetas del autor" }
+        - "True": { message: "No aceptamos fotos con ese nombre" }
     properties:
       nombre:
-        - NotBlank: ~
-      ruta:
-        - NotBlank: ~
-      foto:
         - NotBlank: ~
       descripcion:
         - NotBlank: ~

@@ -1,21 +1,25 @@
 <nav class="uk-navbar uk-margin-large-bottom">
-                <a class="uk-navbar-brand uk-hidden-small" href="/">La Moraña</a>
+                <a class="uk-navbar-brand uk-hidden-small" href="{{ path('homepage') }}">La Moraña</a>
                 <ul class="uk-navbar-nav uk-hidden-small">
                     <li>
-                        <a href="/categorias">Categorias</a>
+                        <a href="{{ path('my_recipes_categoria_todas') }}">Categorias</a>
                     </li>
                     <li>
-                        <a href="http://localhost/morana/web/app_dev.php/usuario/register">Registro</a>
+                        <a href="{{ path('my_recipes_elementos_todos') }}">Sitios</a>
+                    </li>
+                    
+                    {% if is_granted('ROLE_USER') %}
+                    <li>
+                        <a href="{{ path('logout') }}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{{ path('my_recipes_usuario_register') }}">Registro</a>
                     </li>
                     <li>
-                        <a href="layouts_documentation.html">Documentation</a>
+                        <a href="{{ path('login') }}">Login</a>
                     </li>
-                    <li>
-                        <a href="layouts_contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="layouts_login.html">Login</a>
-                    </li>
+                    {% endif %}
                 </ul>
                 <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
                 <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Brand</div>

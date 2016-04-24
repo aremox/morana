@@ -66,4 +66,24 @@ class ElementoController extends Controller
             'form' => $form->createView(),
             'elemento' => $elemento);
     }
+
+    public function showAllAction( $formato, $categoria, Request $request)
+    {
+         $elementos = $this->get('my_recipes.Elementos_Categoria')->filtarCategoria($categoria);
+        
+        switch ($formato) {
+        case "bloques":
+            return $this->render('MyRecipesBundle:Elemento:showAll.html.twig', array(
+                'elementos' => $elementos));
+            break;
+        case "lista":
+            return $this->render('MyRecipesBundle:Elemento:showAllList.html.twig', array(
+                'elementos' => $elementos));
+            break;
+        default:
+            return $this->render('MyRecipesBundle:Elemento:showAll.html.twig', array(
+                'elementos' => $elementos));
+        
+        }         
+    }
 }

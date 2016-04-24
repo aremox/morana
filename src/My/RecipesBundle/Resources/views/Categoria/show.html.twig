@@ -8,4 +8,8 @@
 		<h2>{{ categoria.foto }} </h2>
 		<p>{{ categoria.descripcion }}</p>
 		
+
+		{% if is_granted('ROLE_USER') %}
+    		<a class="uk-button uk-button-primary" href="{{ path('my_recipes_categoria_edit_id',{'id': categoria.id }) }}">Editar</a>
+		{% endif %}
 {% endblock %}

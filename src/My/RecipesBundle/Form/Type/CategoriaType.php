@@ -6,6 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 
 class CategoriaType extends AbstractType
@@ -15,8 +16,8 @@ class CategoriaType extends AbstractType
         $builder
         	->setMethod('PUT')
             ->add('nombre', 'text')
-            ->add('ruta', 'text')
-            ->add('foto', 'text')
+            ->add('ruta', 'text',array('required' => false))
+            ->add('fotoReal', 'file',array('label' => 'Foto', 'required'=> false))
             ->add('descripcion', TextareaType::class, array(
     'attr' => array('class' => 'tinymce'),'label' => 'Descripción'
 ))

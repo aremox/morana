@@ -1,5 +1,6 @@
 My\RecipesBundle\Entity\Elemento:
     type: entity
+    repositoryClass: My\RecipesBundle\Repository\ElementoRepository
     table: elemento
     manyToOne:
         usuario:

@@ -23,6 +23,7 @@ My\RecipesBundle\Entity\Categoria:
         foto:
             type: string
             length: '50'
+            nullable: true
         descripcion:
             type: text
     lifecycleCallbacks: {  }

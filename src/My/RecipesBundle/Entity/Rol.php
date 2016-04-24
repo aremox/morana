@@ -30,6 +30,12 @@ class Rol
     private $descripcion;
 
 
+    public function __construct()
+    {
+           
+    }
+
+
     /**
      * Get id
      *

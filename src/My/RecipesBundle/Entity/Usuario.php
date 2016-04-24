@@ -7,6 +7,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use My\RecipesBundle\Entity\Rol;
 
 
 /**
@@ -95,7 +96,7 @@ class Usuario implements UserInterface
        $this->elementos = new ArrayCollection;
        $this->rolesObj = new ArrayCollection;
        $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
-       
+
     }
 
 public function getElementos()
@@ -430,7 +431,7 @@ public function getElementos()
      */
     public function getRoles()
     {
-        $roles_array = array('ROLE_USER' );
+        $roles_array = array('ROLE_USER');
 
         foreach ($this->rolesObj as $roles) {
                 $roles_array[] = $roles->getRol();

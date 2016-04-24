@@ -1,0 +1,15 @@
+{# app/Resources/TwigBundle/views/Exception/error403.html.twig #}
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block body %}
+    <h1>Acceso denegado</h1>
+
+    {# example security usage, see below #}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {# ... #}
+    {% endif %}
+
+    <p>
+        Contacta con el <a href="mailto:{{ contact_email }}">administrador</a> o <a href="{{ path('homepage') }}">regresa a inicio</a>.
+    </p>
+{% endblock %}

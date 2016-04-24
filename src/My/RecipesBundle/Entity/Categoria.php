@@ -31,6 +31,8 @@ class Categoria
      */
     private $foto;
 
+    private $fotoReal;
+
     /**
      * @var string
      */
@@ -51,7 +53,13 @@ class Categoria
 
     public function isValid()
     {
-        return $this->foto != '123456';
+        if($this->fotoReal){
+            $foto = str_replace(" ","_",$this->fotoReal->getClientOriginalName());
+        return $foto != 'CARTEL_RUTA_octubre_9-12.jpg';
+        }
+
+        return true;
+        
     }
     /**
      * Get id
@@ -153,5 +161,17 @@ class Categoria
     public function getRuta()
     {
         return $this->ruta;
+    }
+
+    public function getFotoReal()
+    {
+        return $this->fotoReal;
+    }
+
+    public function setFotoReal($fotoReal)
+    {
+        $this->fotoReal = $fotoReal;
+
+        return $this;
     }
 }

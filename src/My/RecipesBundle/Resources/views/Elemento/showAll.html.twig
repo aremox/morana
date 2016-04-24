@@ -1,0 +1,31 @@
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}Sitios{% endblock %}
+
+{% block body %}
+<!-- Filter Controls -->
+
+<ul id="my-id" class="uk-subnav uk-subnav-pill">
+    <li  class="uk-active" data-uk-filter=""><a href="">Todos</a></li>
+    <li  data-uk-filter="filter-a"><a href="">Filter A</a></li>
+    <li  data-uk-filter="filter-b"><a href="">Filter B</a></li>
+</ul>
+
+<!-- elementos -->
+<div data-uk-grid="{controls: '#my-id', gutter: 20}">
+	{% for item in elementos %}
+	<div data-uk-filter="filter-a" class="uk-width-medium-1-2 uk-width-small-1-1 uk-margin-large-bottom" >
+		<div class="uk-panel uk-panel-box uk-panel-header">
+    		<h1>{{ item.nombre }} </h1>
+			<h2>{{ item.categoria.nombre }} </h2>
+			<p>{{ item.descripcion }}</p>
+		</div>
+	</div>
+    {% endfor %}
+</div>
+	
+	{% if is_granted('ROLE_USER') %}
+    	<a class="uk-button uk-button-primary" href="{{ path('my_recipes_elementos_todos',{'formato':'lista'}) }}">Editar</a>
+	{% endif %}
+		
+{% endblock %}

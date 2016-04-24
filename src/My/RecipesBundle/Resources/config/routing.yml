@@ -8,6 +8,9 @@ my_recipes_contact:
         _locale: en|fr|de
 ##################################################################################
 ## Elemento
+my_recipes_elementos_todos:
+    pattern:  /elemento/{formato}/{categoria}
+    defaults: { _controller: MyRecipesBundle:Elemento:showAll, formato: "bloques",categoria: "all"}
 my_recipes_elemento_create:
     pattern:  /secured/elemento/create
     defaults: { _controller: MyRecipesBundle:Elemento:create }
@@ -25,8 +28,11 @@ my_recipes_elemento_edit_id:
     requirements:
         elemento_id: \d+
 ## Categoria
+my_recipes_categoria_todas:
+    pattern:  /categorias/{formato}
+    defaults: { _controller: MyRecipesBundle:Categoria:showAll, formato: "bloques"}
 my_recipes_categoria_create:
-    pattern:  /categoria/create
+    pattern:  /secured/categoria/create
     defaults: { _controller: MyRecipesBundle:Categoria:create }
 my_recipes_categoria_ver_id:
     path: /categoria/{categoria_id}
@@ -37,7 +43,7 @@ my_recipes_categoria_ver_ruta:
     path: /categoria/{categoria_ruta}
     defaults: { _controller: MyRecipesBundle:Categoria:showRuta}
 my_recipes_categoria_edit_id:
-    pattern: /categoria/{id}/edit
+    pattern: /secured/categoria/{id}/edit
     defaults: { _controller: MyRecipesBundle:Categoria:edit}
     requirements:
         categoria_id: \d+
@@ -133,8 +139,3 @@ my_recipes_author_show:
 my_recipes_recipe_edit:
     pattern:  /recipes/{id}/edit
     defaults: { _controller: MyRecipesBundle:Recipe:edit }
-
-
-my_recipes_homepage:
-    path:     /{name}
-    defaults: { _controller: MyRecipesBundle:Default:index, name: "Pepe" }
