@@ -46,3 +46,6 @@
 # Sublime
 /.sublime-workspace
 /morana.sublime-project
+
+# log
+/logs/*

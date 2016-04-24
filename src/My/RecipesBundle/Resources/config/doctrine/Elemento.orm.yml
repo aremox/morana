@@ -11,6 +11,7 @@ My\RecipesBundle\Entity\Elemento:
                 referencedColumnName: id
             cascade: ["all"]
         categoria:
+            inversedBy: elementos
             targetEntity: Categoria
             joinColumn:
                 name: categoria_id

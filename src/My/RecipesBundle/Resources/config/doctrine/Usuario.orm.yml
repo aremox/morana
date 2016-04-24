@@ -5,7 +5,7 @@ My\RecipesBundle\Entity\Usuario:
     oneToMany:
         elementos:
           targetEntity: Elemento
-          mappedBy: categoria
+          mappedBy: usuario
     manyToMany:
         rolesObj:
             targetEntity: Rol
