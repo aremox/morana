@@ -17,7 +17,6 @@ class ElementoType extends AbstractType
         $builder
         	->setMethod('PUT')
             ->add('nombre', 'text')
-            ->add('ruta', 'text')
             ->add('logotipo', 'text')
             ->add('categoria', 'entity', array(
     'class' => 'MyRecipesBundle:Categoria',

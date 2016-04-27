@@ -15,7 +15,6 @@ class CaracteristicaType extends AbstractType
         $builder
         	->setMethod('PUT')
             ->add('nombre', 'text')
-            ->add('ruta', 'text')
             ->add('descripcion', TextareaType::class, array(
     'attr' => array('class' => 'tinymce'),'label' => 'Descripción'
 ))

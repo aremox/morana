@@ -24,7 +24,7 @@ class ElementoController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-          
+            $elemento->setRuta($elemento->getNombre());
             $this->get('my_recipes.elemento_creator')->create($elemento);
             $elementoEvent = new ElementoEvent($elemento);
             $this->get('event_dispatcher')->dispatch('elemento.create', $elementoEvent);
@@ -62,6 +62,7 @@ class ElementoController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $elemento->setRuta($elemento->getNombre());
             $this->getDoctrine()->getManager()->flush();
             return $this->redirect($this->generateUrl('my_recipes_elemento_ver_id', array('elemento_id' => $elemento->getId())));
         }
@@ -73,14 +74,19 @@ class ElementoController extends Controller
     public function showAllAction( $formato, $categoria, Request $request)
     {
          $elementos = $this->get('my_recipes.Elementos_Categoria')->filtarCategoria($categoria);
+         $categorias = $this->get('my_recipes.Elementos_Categoria')->obtenerCategoria($categoria);
         
         switch ($formato) {
         case "bloques":
             return $this->render('MyRecipesBundle:Elemento:showAll.html.twig', array(
-                'elementos' => $elementos));
+                'elementos' => $elementos, 'categorias' => $categorias));
             break;
         case "lista":
             return $this->render('MyRecipesBundle:Elemento:showAllList.html.twig', array(
+                'elementos' => $elementos));
+            break;
+        case "portada":
+            return $this->render('MyRecipesBundle:Elemento:showPortada.html.twig', array(
                 'elementos' => $elementos));
             break;
         default:

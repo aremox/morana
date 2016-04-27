@@ -30,11 +30,18 @@
                 </div>
             </div>
             <div class="uk-form-row">
-                {{ form_label(form.ruta, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
-                {{ form_errors(form.ruta) }}
-                <div class="uk-form-controls">
-                    {{ form_widget(form.ruta) }}
-                </div>
+                {{ form_label(form.plainPassword, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 
+                {{ form_errors(form.plainPassword.first) }}
+                    <div class="uk-form-controls">
+                        {{ form_label(form.plainPassword.first, null, { 'attr': {'class': 'form-label'} }) }}
+                        {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-input','value':'nulo'} }) }}
+                    </div>
+
+                {{ form_errors(form.plainPassword.second) }}
+                    <div class="uk-form-controls">
+                        {{ form_label(form.plainPassword.second, null, { 'attr': {'class': 'form-label'} }) }}
+                        {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-input','value':'nulo'} }) }}
+                    </div>
             </div>
             <div class="uk-form-row">
                 {{ form_label(form.mail, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }} 

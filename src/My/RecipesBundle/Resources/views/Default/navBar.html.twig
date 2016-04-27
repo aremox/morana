@@ -7,20 +7,37 @@
                     <li>
                         <a href="{{ path('my_recipes_elementos_todos') }}">Sitios</a>
                     </li>
-                    
-                    {% if is_granted('ROLE_USER') %}
+                    {% if is_granted('ROLE_ADMIN') %}
                     <li>
-                        <a href="{{ path('logout') }}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li>
-                        <a href="{{ path('my_recipes_usuario_register') }}">Registro</a>
+                        <a href="{{ path('my_recipes_caracteristica_todas',{'formato': "lista"}) }}">Caracteristicas</a>
                     </li>
                     <li>
-                        <a href="{{ path('login') }}">Login</a>
+                        <a href="{{ path('my_recipes_usuario_todas',{'formato': "lista"}) }}">Usuarios</a>
                     </li>
                     {% endif %}
-                </ul>
+                    </ul>
+                    <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
+                    {% if is_granted('ROLE_USER') %}
+                    
+                    <div class="uk-button-group uk-parent" data-uk-dropdown aria-haspopup="true" aria-expanded="false">
+                        <a class="uk-button uk-button-primary" href="{{ path('logout') }}">Logout</a>
+                    </div>
+                    {% else %}
+                    <div class="uk-button-group uk-parent" data-uk-dropdown aria-haspopup="true" aria-expanded="false">
+                        <a class="uk-button uk-button-primary"  href="{{ path('login') }}">Login</a>
+                        <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-top" style="top: -218px; left: 0px;">
+                                                <ul class="uk-nav uk-nav-navbar">
+                                                    <li><a class=""  href="{{ path('my_recipes_usuario_register') }}">Registrarse</a></li></li>
+                                                </ul>
+                                            </div>
+                    </div>
+                    {% endif %}
+                          </div>
+                
                 <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
                 <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Brand</div>
             </nav>
+
+
+                                        
+                              

@@ -100,6 +100,10 @@ class CategoriaController extends Controller
             return $this->render('MyRecipesBundle:Categoria:showAllList.html.twig', array(
                 'categorias' => $categorias));
             break;
+        case "portada":
+            return $this->render('MyRecipesBundle:Categoria:showAllPortada.html.twig', array(
+                'categorias' => $categorias));
+            break;
         default:
             return $this->render('MyRecipesBundle:Categoria:showAll.html.twig', array(
                 'categorias' => $categorias));

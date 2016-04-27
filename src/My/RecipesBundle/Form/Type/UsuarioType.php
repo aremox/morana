@@ -7,6 +7,8 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 
 class UsuarioType extends AbstractType
@@ -19,7 +21,11 @@ class UsuarioType extends AbstractType
             ->add('apellido1', 'text', array('label' => 'Primer Apellido'))
             ->add('apellido2', 'text', array('label' => 'Segundo Apellido'))
             ->add('mail', 'text')
-             ->add('ruta', 'text')
+            ->add('plainPassword', RepeatedType::class, array(
+                'type' => PasswordType::class,
+                'first_options'  => array('label' => 'Contraseña 1', 'required'=> false),
+                'second_options' => array('label' => 'Repita contraseña', 'required'=> false),'label' => 'Contraseña', 'required'=> false
+            ))
             ->add('telefono', 'text', array('label' => 'Teléfono'))
             ->add('direccion', 'text', array('label' => 'Dirección'))
             ->add('localidad', 'text')

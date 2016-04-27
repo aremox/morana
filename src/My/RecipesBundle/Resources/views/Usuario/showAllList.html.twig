@@ -1,0 +1,39 @@
+{% extends 'MyRecipesBundle:Default:base.html.twig' %}
+
+{% block title %}Categorias{% endblock %}
+
+{% block body %}
+
+<table class="uk-table uk-table-hover uk-table-striped" cellspacing="0" width="100%" id="example">
+<thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>editar</th>
+        </tr>
+    </thead>
+    <tbody>
+	{% for item in usuarios %}
+	<tr>
+	<td>{{ item.id }}</td>
+	<td>{{ item.nombre }}</td>
+	<td><a class="uk-icon-hover uk-icon-edit" href="{{ path('my_recipes_usuario_edit_id',{'id': item.id }) }}"></a></td>
+    	 </tr>
+    {% endfor %}
+    </tbody>
+</table>
+	
+	{% if is_granted('ROLE_ADMIN') %}
+    	<a class="uk-button uk-button-primary" href="{{path('my_recipes_usuario_create')}}">Crear usuario</a>
+	{% endif %}
+		
+{% endblock %}
+
+{% block javascript %}
+{{ parent() }}
+<script >
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+{% endblock %}

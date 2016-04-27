@@ -18,8 +18,14 @@ class DefaultController extends Controller
 
     public function indexAction($name)
     {
+        $usr= $this->get('security.context')->getToken()->getUser();
+        if( $usr != "anon."){
+            $name = $usr->getNombre();
+        }
+        
+
     	$translated = $this->get('translator')->trans('Hola %name%', array('%name%' => $name ));
-    	
+
     	return $this->render('MyRecipesBundle:Default:base.html.twig', 
             array(
             'bienvenida' => $translated

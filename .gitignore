@@ -11,6 +11,7 @@
 # Cache and logs (Symfony3)
 /var/cache/*
 /var/logs/*
+/logs/*
 !var/cache/.gitkeep
 !var/logs/.gitkeep
 
@@ -46,6 +47,3 @@
 # Sublime
 /.sublime-workspace
 /morana.sublime-project
-
-# log
-/logs/*

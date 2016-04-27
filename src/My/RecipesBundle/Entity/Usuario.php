@@ -345,7 +345,10 @@ class Usuario implements UserInterface
 
     public function getPlainPassword()
     {
-        return $this->plainPassword;
+        
+            return $this->plainPassword;
+        
+       
     }
 
     public function setPlainPassword($password)

@@ -1,16 +1,18 @@
 my_recipes_homepage:
     path:     /
-    defaults: { _controller: MyRecipesBundle:Default:index, name: "Pepe" }
+    defaults: { _controller: MyRecipesBundle:Default:index, name: "" }
 my_recipes_contact:
     path:     /{_locale}/recipes/{recipe_id}
     defaults: { _controller: MyRecipesBundle:Recipe:showId, _locale: en }
     requirements:
-        _locale: en|fr|de
+        _locale: en|fr|es
 ##################################################################################
 ## Elemento
 my_recipes_elementos_todos:
     pattern:  /elemento/{formato}/{categoria}
     defaults: { _controller: MyRecipesBundle:Elemento:showAll, formato: "bloques",categoria: "all"}
+    requirements:
+        formato: bloques|lista|portada
 my_recipes_elemento_create:
     pattern:  /secured/elemento/create
     defaults: { _controller: MyRecipesBundle:Elemento:create }
@@ -31,6 +33,8 @@ my_recipes_elemento_edit_id:
 my_recipes_categoria_todas:
     pattern:  /categorias/{formato}
     defaults: { _controller: MyRecipesBundle:Categoria:showAll, formato: "bloques"}
+    requirements:
+        formato: bloques|lista|portada
 my_recipes_categoria_create:
     pattern:  /secured/categoria/create
     defaults: { _controller: MyRecipesBundle:Categoria:create }
@@ -48,8 +52,13 @@ my_recipes_categoria_edit_id:
     requirements:
         categoria_id: \d+
 ## Caracteristica
+my_recipes_caracteristica_todas:
+    pattern:  /secured/caracteristicas/{formato}
+    defaults: { _controller: MyRecipesBundle:Caracteristica:showAll, formato: "lista"}
+    requirements:
+        formato: bloques|lista|portada
 my_recipes_caracteristica_create:
-    pattern:  /caracteristica/create
+    pattern:  /secured/caracteristica/create
     defaults: { _controller: MyRecipesBundle:Caracteristica:create }
 my_recipes_caracteristica_ver_id:
     path: /caracteristica/{caracteristica_id}
@@ -65,6 +74,11 @@ my_recipes_caracteristica_edit_id:
     requirements:
         caracteristica_id: \d+
 ## Usuario
+my_recipes_usuario_todas:
+    pattern:  /secured/admin/usuario/{formato}
+    defaults: { _controller: MyRecipesBundle:Usuario:showAll, formato: "lista"}
+    requirements:
+        formato: bloques|lista|portada
 my_recipes_usuario_create:
     pattern:  /secured/admin/usuario/create
     defaults: { _controller: MyRecipesBundle:Usuario:create }

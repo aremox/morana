@@ -24,6 +24,7 @@ class UsuarioController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $usuario->setRuta($usuario->getMail());
             $em = $this->getDoctrine()->getManager();
             $em->persist($usuario);
             $em->flush();
@@ -60,6 +61,13 @@ class UsuarioController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $usuario->setRuta($usuario->getMail());
+            if($usuario->getPlainPassword() != 'nulo'){
+                $password = $this->get('security.password_encoder')
+                ->encodePassword($usuario, $usuario->getPlainPassword());
+                $usuario->setPassword($password);
+            }
+            
             $this->getDoctrine()->getManager()->flush();
             return $this->redirect($this->generateUrl('my_recipes_usuario_ver_id', array('usuario_id' => $usuario->getId())));
         }
@@ -91,5 +99,26 @@ class UsuarioController extends Controller
                 array('usuario_id' => $usuario->getId())));
         }
         return array('form' => $form->createView());
+    }
+
+    public function showAllAction( $formato, Request $request)
+    {
+        $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Usuario');
+        $usuarios = $repository->findAll();
+
+        switch ($formato) {
+        case "bloques":
+            return $this->render('MyRecipesBundle:Usuario:showAll.html.twig', array(
+                'usuarios' => $usuarios));
+            break;
+        case "lista":
+            return $this->render('MyRecipesBundle:Usuario:showAllList.html.twig', array(
+                'usuarios' => $usuarios));
+            break;
+        default:
+            return $this->render('MyRecipesBundle:Usuario:showAll.html.twig', array(
+                'usuarios' => $usuarios));
+        
+        }         
     }
 }

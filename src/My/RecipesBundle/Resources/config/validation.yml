@@ -20,7 +20,5 @@ My\RecipesBundle\Entity\Caracteristica:
   properties:
     nombre:
       - NotBlank: ~
-    ruta:
-        - NotBlank: ~
     descripcion:
       - NotBlank: ~

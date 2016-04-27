@@ -23,6 +23,7 @@ class CaracteristicaController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $caracteristica->setRuta($caracteristica->getNombre());
             $em = $this->getDoctrine()->getManager();
             $em->persist($caracteristica);
             $em->flush();
@@ -65,5 +66,26 @@ class CaracteristicaController extends Controller
         return array(
             'form' => $form->createView(),
             'caracteristica' => $caracteristica);
+    }
+
+    public function showAllAction( $formato, Request $request)
+    {
+        $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Caracteristica');
+        $caracteristicas = $repository->findAll();
+
+        switch ($formato) {
+        case "bloques":
+            return $this->render('MyRecipesBundle:Caracteristica:showAll.html.twig', array(
+                'caracteristicas' => $caracteristicas));
+            break;
+        case "lista":
+            return $this->render('MyRecipesBundle:Caracteristica:showAllList.html.twig', array(
+                'caracteristicas' => $caracteristicas));
+            break;
+        default:
+            return $this->render('MyRecipesBundle:Caracteristica:showAll.html.twig', array(
+                'caracteristicas' => $caracteristicas));
+        
+        }         
     }
 }

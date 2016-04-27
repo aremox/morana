@@ -9,15 +9,26 @@ class ElementosCategoria
     private $repository;
 
     public function __construct(ObjectManager $om) {
-        $this->repository = $om->getRepository('MyRecipesBundle:Elemento');
+        $this->repositoryElementos = $om->getRepository('MyRecipesBundle:Elemento');
+        $this->repositoryCategorias = $om->getRepository('MyRecipesBundle:Categoria');
     }
 
     public function filtarCategoria( $categoria)
     {
         if($categoria == 'all'){
-            return $this->repository->findAll();
+            return $this->repositoryElementos->findAll();
         }else{
-            return $this->repository->findCategoria($categoria);
+            return $this->repositoryElementos->findCategoria($categoria);
+        }
+        
+    }
+
+    public function obtenerCategoria( $categoria)
+    {
+        if($categoria == 'all'){
+            return $this->repositoryCategorias->findAll();
+        }else{
+            return $categoria;
         }
         
     }

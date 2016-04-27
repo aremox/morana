@@ -4,19 +4,19 @@
 		<body>
 			<trans-unit id="1">
 				<source>Hola %name%</source>
-				<target>Bonjour %name%</target>
+				<target>Hello %name%</target>
 			</trans-unit>
 			<trans-unit id="2">
-				<source>Pollo al pil-pil</source>
-				<target>Poulet sauce pil-pil</target>
+				<source>Te presentamos la comarca de La Moraña en Ávila. Ven a conocerla y a disfrutar de ella.</source>
+				<target>We present the region of La Moraña Avila. Come to know it and to enjoy it.</target>
 			</trans-unit>
 			<trans-unit id="3">
-				<source>pollo.pilpil</source>
-				<target>Poulet sauce pil-pil</target>
+				<source>Categorias</source>
+				<target>Categories</target>
 			</trans-unit>
 			<trans-unit id="Hello">
-				<source>Hello</source>
-				<target>Hola</target>
+				<source>Sitios</source>
+				<target>Places</target>
 			</trans-unit>
 		</body>
 	</file>
