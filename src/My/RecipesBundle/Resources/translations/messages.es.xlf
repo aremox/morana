@@ -4,19 +4,55 @@
 		<body>
 			<trans-unit id="1">
 				<source>Hola %name%</source>
-				<target>Bonjour %name%</target>
+				<target>Hola %name%</target>
 			</trans-unit>
 			<trans-unit id="2">
-				<source>Pollo al pil-pil</source>
-				<target>Poulet sauce pil-pil</target>
+				<source>Te presentamos la comarca de La Moraña en Ávila. Ven a conocerla y a disfrutar de ella.</source>
+				<target>Te presentamos la comarca de La Moraña en Ávila. Ven a conocerla y a disfrutar de ella.</target>
 			</trans-unit>
 			<trans-unit id="3">
-				<source>pollo.pilpil</source>
-				<target>Poulet sauce pil-pil</target>
+				<source>Categorias</source>
+				<target>Categorias</target>
 			</trans-unit>
-			<trans-unit id="Hello">
-				<source>Hello</source>
-				<target>Hola</target>
+			<trans-unit id="4">
+				<source>Sitios</source>
+				<target>Sitios</target>
+			</trans-unit>
+			<trans-unit id="5">
+				<source>iniciar sesión</source>
+				<target>iniciar sesión</target>
+			</trans-unit>
+			<trans-unit id="6">
+				<source>Registrarse</source>
+				<target>Registrarse</target>
+			</trans-unit>
+			<trans-unit id="7">
+				<source>Salir</source>
+				<target>Salir</target>
+			</trans-unit>
+			<trans-unit id="8">
+				<source>Todos</source>
+				<target>Todos</target>
+			</trans-unit>
+			<trans-unit id="9">
+				<source>Que ver</source>
+				<target>Que ver</target>
+			</trans-unit>
+			<trans-unit id="10">
+				<source>Que hacer</source>
+				<target>Que hacer</target>
+			</trans-unit>
+			<trans-unit id="11">
+				<source>Donde comer</source>
+				<target>Donde comer</target>
+			</trans-unit>
+			<trans-unit id="12">
+				<source>Donde dormir</source>
+				<target>Donde dormir</target>
+			</trans-unit>
+			<trans-unit id="13">
+				<source>Donde comprar</source>
+				<target>Donde comprar</target>
 			</trans-unit>
 		</body>
 	</file>

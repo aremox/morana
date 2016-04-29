@@ -23,7 +23,7 @@ class UsuarioType extends AbstractType
             ->add('mail', 'text')
             ->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
-                'first_options'  => array('label' => 'Contraseña 1', 'required'=> false),
+                'first_options'  => array('label' => 'Contraseña', 'required'=> false),
                 'second_options' => array('label' => 'Repita contraseña', 'required'=> false),'label' => 'Contraseña', 'required'=> false
             ))
             ->add('telefono', 'text', array('label' => 'Teléfono'))

@@ -6,7 +6,7 @@
 <!-- Filter Controls -->
 
 <ul id="my-id" class="uk-subnav uk-subnav-pill">
-	<li  class="uk-active" data-uk-filter=""><a href="">Todos</a></li>
+	<li  class="uk-active" data-uk-filter=""><a href="">{% trans %}Todos{% endtrans %}</a></li>
 		{% for item in categorias %}
     		<li  data-uk-filter="{{ item.nombre }}"><a href="">{{ item.nombre }}</a></li>
     	{% endfor %}
@@ -20,14 +20,14 @@
     		<h1>{{ item.nombre }} </h1>
 			<h2>{{ item.categoria.nombre }} </h2>
 			<p>{{ item.descripcion }}</p>
-			<a class="" href="{{ path('my_recipes_elemento_ver_ruta',{'elemento_ruta':item.ruta}) }}"><h2 class="uk-button uk-button-primary" class="uk-h2">Leer más</h2> </a>
+			<a class="" href="{{ path('my_recipes_elemento_ver_ruta',{'elemento_ruta':item.ruta}) }}"><h2 class="uk-button uk-button-primary" class="uk-h2">{% trans %}Leer más{% endtrans %}</h2> </a>
 		</div>
 	</div>
     {% endfor %}
 </div>
 	
 	{% if is_granted('ROLE_USER') %}
-    	<a class="uk-button uk-button-primary" href="{{ path('my_recipes_elementos_todos',{'formato':'lista'}) }}">Editar</a>
+    	<a class="uk-button uk-button-primary" href="{{ path('my_recipes_elementos_todos',{'formato':'lista'}) }}">{% trans %}Editar{% endtrans %}</a>
 	{% endif %}
 		
 {% endblock %}

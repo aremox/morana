@@ -16,8 +16,19 @@ class DefaultController extends Controller
 
 	
 
-    public function indexAction($name)
+    public function indexAction($name, Request $request, $_locale )
     {
+        $session = $request->getSession();
+        $request = $this->getRequest();
+        if( $request->getLocale()){
+            $request->setLocale($_locale);
+            $session->getFlashBag()->add(
+                'Locale',
+                $request->getLocale()
+            );
+        }
+        
+
         $usr= $this->get('security.context')->getToken()->getUser();
         if( $usr != "anon."){
             $name = $usr->getNombre();

@@ -18,6 +18,130 @@
 				<source>Sitios</source>
 				<target>Places</target>
 			</trans-unit>
+			<trans-unit id="login">
+				<source>iniciar sesión</source>
+				<target>Login</target>
+			</trans-unit>
+			<trans-unit id="registro">
+				<source>Registrarse</source>
+				<target>Check in</target>
+			</trans-unit>
+			<trans-unit id="7">
+				<source>Salir</source>
+				<target>Logout</target>
+			</trans-unit>
+			<trans-unit id="8">
+				<source>Todos</source>
+				<target>All</target>
+			</trans-unit>
+			<trans-unit id="9">
+				<source>Que ver</source>
+				<target>What to see</target>
+			</trans-unit>
+			<trans-unit id="10">
+				<source>Que hacer</source>
+				<target>What to do</target>
+			</trans-unit>
+			<trans-unit id="11">
+				<source>Donde comer</source>
+				<target>Where to eat</target>
+			</trans-unit>
+			<trans-unit id="12">
+				<source>Donde dormir</source>
+				<target>Where to sleep</target>
+			</trans-unit>
+			<trans-unit id="13">
+				<source>Donde comprar</source>
+				<target>Where to buy</target>
+			</trans-unit>
+			<trans-unit id="14">
+				<source>Caracteristicas</source>
+				<target>Characteristics</target>
+			</trans-unit>
+			<trans-unit id="15">
+				<source>Usuarios</source>
+				<target>Users</target>
+			</trans-unit>
+			<trans-unit id="16">
+				<source>Editar</source>
+				<target>Edit</target>
+			</trans-unit>
+			<trans-unit id="17">
+				<source>Leer más</source>
+				<target>Read more</target>
+			</trans-unit>
+			<trans-unit id="18">
+				<source>Crear categoria</source>
+				<target>Create category</target>
+			</trans-unit>
+			<trans-unit id="19">
+				<source>id</source>
+				<target>id</target>
+			</trans-unit>
+			<trans-unit id="20">
+				<source>Nombre</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="21">
+				<source>Ruta</source>
+				<target>Route</target>
+			</trans-unit>
+			<trans-unit id="22">
+				<source>Foto</source>
+				<target>Photo</target>
+			</trans-unit>
+			<trans-unit id="23">
+				<source>Descripción</source>
+				<target>Desciption</target>
+			</trans-unit>
+			<trans-unit id="24">
+				<source>Guardar</source>
+				<target>Save</target>
+			</trans-unit>
+			<trans-unit id="25">
+				<source>Logotipo</source>
+				<target>Logo</target>
+			</trans-unit>
+			<trans-unit id="26">
+				<source>Categoria</source>
+				<target>Category</target>
+			</trans-unit>
+			<trans-unit id="27">
+				<source>Propietario</source>
+				<target>Owner</target>
+			</trans-unit>
+			<trans-unit id="28">
+				<source>Crear sitio</source>
+				<target>Create place</target>
+			</trans-unit>
+			<trans-unit id="29">
+				<source>Crear caracteristica</source>
+				<target>Create feature</target>
+			</trans-unit>
+			<trans-unit id="30">
+				<source>Crear usuario</source>
+				<target>Create user</target>
+			</trans-unit>
+			<trans-unit id="31">
+				<source>Descubre ofertas y lugares increibles.</source>
+				<target>Discover offers and incredible places.</target>
+			</trans-unit>
+			<trans-unit id="32">
+				<source>Registrate para poder acceder a ellas.</source>
+				<target>Register to access them.</target>
+			</trans-unit>
+			<trans-unit id="33">
+				<source>e-mail de contacto</source>
+				<target>Contact email</target>
+			</trans-unit>
+			<trans-unit id="34">
+				<source>Últimas recetas</source>
+				<target>Last Recipes</target>
+			</trans-unit>
+			<trans-unit id="35">
+				<source>Spanish</source>
+				<target>English</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

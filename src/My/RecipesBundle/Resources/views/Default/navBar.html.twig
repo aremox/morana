@@ -2,32 +2,38 @@
                 <a class="uk-navbar-brand uk-hidden-small" href="{{ path('homepage') }}">La Moraña</a>
                 <ul class="uk-navbar-nav uk-hidden-small">
                     <li>
-                        <a href="{{ path('my_recipes_categoria_todas') }}">Categorias</a>
+                        <a href="{{ path('my_recipes_categoria_todas') }}">{% trans %}Categorias{% endtrans %}</a>
                     </li>
                     <li>
-                        <a href="{{ path('my_recipes_elementos_todos') }}">Sitios</a>
+                        <a href="{{ path('my_recipes_elementos_todos') }}">{% trans %}Sitios{% endtrans %}</a>
                     </li>
                     {% if is_granted('ROLE_ADMIN') %}
                     <li>
-                        <a href="{{ path('my_recipes_caracteristica_todas',{'formato': "lista"}) }}">Caracteristicas</a>
+                        <a href="{{ path('my_recipes_caracteristica_todas',{'formato': "lista"}) }}">{% trans %}Caracteristicas{% endtrans %}</a>
                     </li>
                     <li>
-                        <a href="{{ path('my_recipes_usuario_todas',{'formato': "lista"}) }}">Usuarios</a>
+                        <a href="{{ path('my_recipes_usuario_todas',{'formato': "lista"}) }}">{% trans %}Usuarios{% endtrans %}</a>
                     </li>
                     {% endif %}
                     </ul>
                     <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
+                    <a href="{{ path('my_recipes_locale', {'_locale': 'en' }) }}">
+                        <img class="" style="width: 25px;" src="{{ asset('images/icon/ingles.png') }}" alt="ingles">
+                    </a>
+                    <a href="{{ path('my_recipes_locale', {'_locale': 'es' }) }}">
+                        <img class="" style="width: 25px;" src="{{ asset('images/icon/espana.png') }}" alt="español">
+                    </a>
                     {% if is_granted('ROLE_USER') %}
                     
                     <div class="uk-button-group uk-parent" data-uk-dropdown aria-haspopup="true" aria-expanded="false">
-                        <a class="uk-button uk-button-primary" href="{{ path('logout') }}">Logout</a>
+                        <a class="uk-button uk-button-primary" href="{{ path('logout') }}">{% trans %}Salir{% endtrans %}</a>
                     </div>
                     {% else %}
                     <div class="uk-button-group uk-parent" data-uk-dropdown aria-haspopup="true" aria-expanded="false">
-                        <a class="uk-button uk-button-primary"  href="{{ path('login') }}">Login</a>
+                        <a class="uk-button uk-button-primary"  href="{{ path('login') }}">{% trans %}iniciar sesión{% endtrans %}</a>
                         <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-top" style="top: -218px; left: 0px;">
                                                 <ul class="uk-nav uk-nav-navbar">
-                                                    <li><a class=""  href="{{ path('my_recipes_usuario_register') }}">Registrarse</a></li></li>
+                                                    <li><a class=""  href="{{ path('my_recipes_usuario_register') }}">{% trans %}Registrarse{% endtrans %}</a></li></li>
                                                 </ul>
                                             </div>
                     </div>

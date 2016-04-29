@@ -36,4 +36,9 @@ services:
         arguments: ["@logger"]
         tags:
           - { name: kernel.event_listener, event: elemento.create, method: onElementoCreate }
+  my_recipes.locale_listener:
+        class: My\RecipesBundle\Form\EventListener\LocaleListener
+        arguments: ['%kernel.default_locale%']
+        tags:
+            - { name: kernel.event_subscriber }
   

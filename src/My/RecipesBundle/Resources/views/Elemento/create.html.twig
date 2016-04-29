@@ -7,7 +7,7 @@
    {{ form_start(form, {'attr' : { 'id' : 'author-create', 'class' : 'uk-form uk-form-horizontal'}}) }}
     {{ form_errors(form) }}
     	<fieldset data-uk-margin>
-        <legend>Crear Categoria</legend>
+        <legend>Crear Elemento</legend>
      		<div class="uk-form-row">
             	{{ form_label(form.nombre, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }}
             	{{ form_errors(form.nombre) }}
@@ -28,6 +28,13 @@
                 {{ form_errors(form.categoria) }}
                 <div class="uk-form-controls">
                     {{ form_widget(form.categoria) }}
+                </div>
+            </div>
+            <div class="uk-form-row">
+                {{ form_label(form.usuario, null, {'label_attr' : { 'class' : 'uk-form-label'}}) }}
+                {{ form_errors(form.usuario) }}
+                <div class="uk-form-controls">
+                    {{ form_widget(form.usuario) }}
                 </div>
             </div>
      		<div class="uk-form-row">

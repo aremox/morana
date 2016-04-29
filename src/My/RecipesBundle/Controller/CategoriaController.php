@@ -90,6 +90,7 @@ class CategoriaController extends Controller
     {
         $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Categoria');
         $categorias = $repository->findAll();
+        
 
         switch ($formato) {
         case "bloques":

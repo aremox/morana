@@ -4,12 +4,11 @@
 
 {% block body %}
 		<h1>{{ categoria.nombre }} </h1>
-		<h3>{{ categoria.ruta }} </h3>
-		<h2>{{ categoria.foto }} </h2>
+		<img class="uk-thumbnail" src="{{ asset('images/categorias/') ~ categoria.foto }}" alt="{{ categoria.nombre }}">
 		<p>{{ categoria.descripcion }}</p>
 		
 
 		{% if is_granted('ROLE_USER') %}
-    		<a class="uk-button uk-button-primary" href="{{ path('my_recipes_categoria_edit_id',{'id': categoria.id }) }}">Editar</a>
+    		<a class="uk-button uk-button-primary" href="{{ path('my_recipes_categoria_edit_id',{'id': categoria.id }) }}">{% trans %}Editar{% endtrans %}</a>
 		{% endif %}
 {% endblock %}

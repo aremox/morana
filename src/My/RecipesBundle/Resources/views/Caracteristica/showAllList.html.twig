@@ -7,9 +7,9 @@
 <table class="uk-table uk-table-hover uk-table-striped" cellspacing="0" width="100%" id="example">
 <thead>
         <tr>
-            <th>id</th>
-            <th>nombre</th>
-            <th>editar</th>
+            <th>{% trans %}id{% endtrans %}</th>
+            <th>{% trans %}Nombre{% endtrans %}</th>
+            <th>{% trans %}Editar{% endtrans %}</th>
         </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
 </table>
 	
 	{% if is_granted('ROLE_USER') %}
-    	<a class="uk-button uk-button-primary" href="{{path('my_recipes_caracteristica_create')}}">Crear caracteristica</a>
+    	<a class="uk-button uk-button-primary" href="{{path('my_recipes_caracteristica_create')}}">{% trans %}Crear caracteristica{% endtrans %}</a>
 	{% endif %}
 		
 {% endblock %}
@@ -33,7 +33,11 @@
 {{ parent() }}
 <script >
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+    "language": {
+                "url": "/public/js/translation/{% trans %}Spanish{% endtrans %}.json"
+            }
+    });
 } );
 </script>
 {% endblock %}
