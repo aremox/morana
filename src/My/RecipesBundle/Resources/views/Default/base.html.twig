@@ -17,10 +17,13 @@
 		{% block footer %}{% include 'MyRecipesBundle:Default:footer.html.twig' %}{% endblock %}
 		</div>
 		{% block javascript %}
-			{% javascripts 'public/js/*' %}
+			{% javascripts 'public/js/*' output='js/compiled/main1.js'  %}
 				<script type="text/javascript" src="{{ asset_url}}"></script>
 			{% endjavascripts %}
-			{% javascripts 'public/js/components/*' %}
+			{% javascripts 'public/js/components/*' output='js/compiled/main2.js'  %}
+				<script type="text/javascript" src="{{ asset_url}}"></script>
+			{% endjavascripts %}
+			{% javascripts 'public/js/datatable/*' output='js/compiled/main3.js'  %}
 				<script type="text/javascript" src="{{ asset_url}}"></script>
 			{% endjavascripts %}
 		{% endblock %}
